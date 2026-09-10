@@ -1,2 +1,2 @@
 **horse** added; stay tuned for more!
-![horse](/images/e182272c70f7199618bb5bf003501ec6.jpg)
+![horse](/images/pixil-frame-0.png)
