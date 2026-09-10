@@ -1,1 +1,1 @@
-I really wanted to put a horse here but apparently its not possible in this kind of file so you'll just have to use your imagination. For now.
+I really wanted to put a horse here but couldn't figure out how so you'll just have to use your imagination. For now.
