@@ -1,9 +1,8 @@
 /**
- * Title of Project
- * Author Name
+ * Herd of Horses?
+ * Laurel Tillier
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Herd of horses? Yeah, I've heard of em.
  */
 
 "use strict";
@@ -12,6 +11,8 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
+    
+CreateCanvas(500, 500);
 
 }
 
@@ -20,5 +21,5 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-
+background(0,0,0);
 }
