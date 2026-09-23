@@ -12,7 +12,7 @@
 */
 function setup() {
     
-CreateCanvas(500, 500);
+createCanvas(500,500);
 
 }
 
@@ -21,5 +21,6 @@ CreateCanvas(500, 500);
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-background(0,0,0);
+background(100,100,100);
+
 }
