@@ -65,10 +65,20 @@ sky.r=constrain(sky.r,15,255);
 sky.g=constrain(sky.g,50,255);
 sky.b=constrain(sky.b,100,255);
 
+//draw bird
+drawBird(mouseX,mouseY);
+
 }
 
-//makin my bird
+//makin my 'bird' - its a wizard orb
 function drawBird(x,y){
+    //orb pedestal
     fill(255,255,255);
-    ellipse(x,y,20,10);
+    ellipse(x,y,50,20);
+    //orb silhouette
+    fill(50,50,50);
+    ellipse(x,y-20,50,50);
+    //orb shine
+    fill(200,200,200);
+    ellipse(x+2,y-22,47,47);
 }
