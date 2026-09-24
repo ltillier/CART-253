@@ -28,11 +28,14 @@ let sky = {
 
 }
 
-//bird
+//bird location
 let bird = {
     X:10,
     Y:10
 }
+
+//rage 
+let rage = 1
 
 /**
  * Create the canvas
@@ -55,8 +58,8 @@ function draw() {
   pop();
 
   // Make Mr. Furious redder over time
-  mrFurious.fill.g = mrFurious.fill.g-1
-  mrFurious.fill.b = mrFurious.fill.b-1
+  mrFurious.fill.g = mrFurious.fill.g-random(0,1)
+  mrFurious.fill.b = mrFurious.fill.b-random(0,1)
  mrFurious.fill.g=constrain(mrFurious.fill.g,50,255);
 
  // Make day turn to night
@@ -72,6 +75,16 @@ sky.b=constrain(sky.b,100,255);
 //draw bird
 drawBird(bird.X,bird.Y);
 
+//Mr. Furious wiggles with rage
+mrFurious.x=mrFurious.x+random(-rage,rage);
+mrFurious.y=mrFurious.y+random(-rage,rage);
+
+//Mr. Furious stays in the canvas despite his wrathful wiggles
+mrFurious.x=constrain(mrFurious.x,0,400);
+mrFurious.y=constrain(mrFurious.y,0,400);
+
+//His rage increases
+rage=rage+random(-1,1)
 }
 
 //makin my 'bird' - its a wizard orb
