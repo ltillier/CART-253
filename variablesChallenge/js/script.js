@@ -28,7 +28,7 @@ let sky = {
 
 }
 
-//bird location
+//'bird' location
 let bird = {
     X:10,
     Y:10
@@ -72,7 +72,7 @@ sky.r=constrain(sky.r,15,255);
 sky.g=constrain(sky.g,50,255);
 sky.b=constrain(sky.b,100,255);
 
-//draw bird
+//draw 'bird'
 drawBird(bird.X,bird.Y);
 
 //Mr. Furious wiggles with rage
@@ -87,7 +87,7 @@ mrFurious.y=constrain(mrFurious.y,0,400);
 rage=rage+random(-1,1)
 }
 
-//makin my 'bird' - its a wizard orb
+//makin my 'bird' - it's a wizard orb
 function drawBird(x,y){
     //orb pedestal
     fill(100,50,10);
@@ -102,7 +102,7 @@ function drawBird(x,y){
     fill(255,255,255);
     ellipse(x+10,y-35,10,10);
 
-    //makin my bird MOVE and wiggle
+    //making my 'bird' move and wiggle
     bird.X=bird.X+random(-2,3)
     bird.Y=bird.Y+random(-1,2)
     bird.X=constrain(bird.X,0,200)
