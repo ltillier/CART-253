@@ -28,6 +28,8 @@ let sky = {
 
 }
 
+
+
 /**
  * Create the canvas
  */
@@ -63,5 +65,10 @@ sky.r=constrain(sky.r,15,255);
 sky.g=constrain(sky.g,50,255);
 sky.b=constrain(sky.b,100,255);
 
+}
 
+//makin my bird
+function drawBird(x,y){
+    fill(255,255,255);
+    ellipse(x,y,20,10);
 }
