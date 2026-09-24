@@ -103,7 +103,9 @@ function drawBird(x,y){
     ellipse(x+10,y-35,10,10);
 
     //makin my bird MOVE and wiggle
-    bird.X=bird.X+random(0,3)
-    bird.Y=bird.Y+random(0,2)
+    bird.X=bird.X+random(-2,3)
+    bird.Y=bird.Y+random(-1,2)
+    bird.X=constrain(bird.X,0,200)
+    bird.Y=constrain(bird.Y,0,200)
 
 }
