@@ -73,13 +73,13 @@ drawBird(mouseX,mouseY);
 //makin my 'bird' - its a wizard orb
 function drawBird(x,y){
     //orb pedestal
-    fill(255,255,255);
+    fill(100,50,10);
     ellipse(x,y,50,20);
     //orb silhouette
-    fill(50,50,50);
+    fill(100,50,100);
     ellipse(x,y-20,50,50);
     //orb color
-    fill(200,200,200);
+    fill(random(200,220),random(150,155),random(200,225));
     ellipse(x+2,y-22,47,47);
     //orb shine
     fill(255,255,255);
