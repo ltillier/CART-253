@@ -28,7 +28,11 @@ let sky = {
 
 }
 
-
+//bird
+let bird = {
+    X:10,
+    Y:10
+}
 
 /**
  * Create the canvas
@@ -66,7 +70,7 @@ sky.g=constrain(sky.g,50,255);
 sky.b=constrain(sky.b,100,255);
 
 //draw bird
-drawBird(mouseX,mouseY);
+drawBird(bird.X,bird.Y);
 
 }
 
@@ -84,4 +88,9 @@ function drawBird(x,y){
     //orb shine
     fill(255,255,255);
     ellipse(x+10,y-35,10,10);
+
+    //makin my bird MOVE and wiggle
+    bird.X=bird.X+random(0,3)
+    bird.Y=bird.Y+random(0,2)
+
 }
