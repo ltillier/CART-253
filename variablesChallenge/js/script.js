@@ -78,7 +78,10 @@ function drawBird(x,y){
     //orb silhouette
     fill(50,50,50);
     ellipse(x,y-20,50,50);
-    //orb shine
+    //orb color
     fill(200,200,200);
     ellipse(x+2,y-22,47,47);
+    //orb shine
+    fill(255,255,255);
+    ellipse(x+10,y-35,10,10);
 }
