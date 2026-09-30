@@ -21,15 +21,15 @@ createCanvas(500,500);
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-background(175,195,225);
+background(160,180,210);
 //riverbank silhouette
-fill(0,200,0);
+fill(45,60,40);
 triangle(0,250,500,200,500,400);
 //river
-fill(0,0,200);
+fill(65,95,120);
 ellipse(100,425,900,350);
 //other riverbank
-fill(0,200,0);
+fill(45,60,40);
 quad(0,200,220,240,220,275,0,375);
 //powerlines
 fill(200,200,200);
