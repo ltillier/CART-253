@@ -1,6 +1,6 @@
 /**
- * Title of Project
- * Author Name
+ * Push A Puck
+ * Laurel Tillier
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
  * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
@@ -20,6 +20,8 @@ const puck = {
   x: 200,
   y: 200,
   size: 100,
+  speedx: 1,
+  speedy: 1,
   fill: "#ff0000"
 };
 
@@ -49,6 +51,9 @@ function draw() {
   // Draw the user and puck
   drawUser();
   drawPuck();
+  // Move puck
+  movePuck();
+  console.log(puck.x);
 }
 
 /**
@@ -79,4 +84,35 @@ function drawPuck() {
   fill(puck.fill);
   ellipse(puck.x, puck.y, puck.size);
   pop();
+}
+/**
+ * Moves puck when user gets too close
+ */
+function movePuck() {
+  //check overlap
+
+  //calculate distance between circles' centres
+  const d = dist(user.x, user.y, puck.x, puck.y);
+  //check if that distance is smaller than their two radii
+  const overlap = (d< user.size/2 + puck.size/2);
+  //what happens when they do overlap?
+  //move the puck away from the user when they overlap
+  if(overlap) {
+    puck.x = puck.x + puck.speedx
+    puck.y = puck.y + puck.speedy
+    if(puck.x >= user.x) {
+      puck.speedx = 5
+    }
+    if(puck.x <= user.x) {
+      puck.speedx = -5
+    }
+    if(puck.y >= user.y){
+      puck.speedy = 5
+    }
+    if(puck.y <= user.y){
+      puck.speedy = -5
+    }
+
+  }
+
 }
