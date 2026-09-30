@@ -58,14 +58,14 @@ function draw() {
   pop();
 
   // Make Mr. Furious redder over time
-  mrFurious.fill.g = mrFurious.fill.g-random(0,1)
-  mrFurious.fill.b = mrFurious.fill.b-random(0,1)
+  mrFurious.fill.g = mrFurious.fill.g-random(0,0.5)
+  mrFurious.fill.b = mrFurious.fill.b-random(0,0.5)
  mrFurious.fill.g=constrain(mrFurious.fill.g,50,255);
 
  // Make day turn to night
-sky.r=sky.r-1
-sky.g=sky.g-1
-sky.b=sky.b-1
+sky.r=sky.r-0.5
+sky.g=sky.g-0.5
+sky.b=sky.b-0.5
 
 // Make night not so dark
 sky.r=constrain(sky.r,15,255);
