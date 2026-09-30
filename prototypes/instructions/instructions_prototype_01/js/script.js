@@ -37,8 +37,8 @@ drawHorse();
 function drawHorse() {
     drawBody();
     drawHead();
-    drawEyes();
-    drawOrifice();
+    drawEye();
+    drawFeatures();
     drawMouth();
 }
 
@@ -63,9 +63,34 @@ function drawHead() {
     //horse head
     push();
     fill(200);
-    ellipse(240,150,175);
+    ellipse(240,150,180);
     //horse nose (this is part of the head if you think about it)
-    ellipse(400,100,100);
+    ellipse(400,150,100);
+    //connecting nose and head
+    quad(240,60,400,100,400,180,240,220);
     pop();
-
+}
+/**
+ * Draw horse eyes
+ */
+function drawEye () {
+    //add eyeball
+    push();
+    fill(250);
+    ellipse(275,100,25);
+    //add eyelid
+    fill(220);
+    quad(290,85,265,100,285,115,200,100);
+    pop();
+}
+/**
+ * draws facial features of horse
+ */
+function drawFeatures () {
+    //add nose
+    push();
+    fill(100);
+    ellipse(420,120,15);
+    triangle(420,120,405,112.5,420,112.5,)
+    pop();
 }
