@@ -19,10 +19,10 @@
 const puck = {
   x: 200,
   y: 200,
-  size: 100,
+  size: 50,
   speedx: 1,
   speedy: 1,
-  fill: "#ff0000"
+  fill: "#ff00f0"
 };
 
 const user = {
@@ -32,13 +32,13 @@ const user = {
   fill: "#000000"
 };
 
-const target = { //add a target for the puck to hit!
+let target = { //add a target for the puck to hit!
   x:50,
   y:50,
   size:50,
   fill:"#fff000",
   fills: {
-    noOverlap: "#fff000",
+    noOverlap: "#00ff0d",
     overlap: "#ff00f0"
   }
 
@@ -54,7 +54,7 @@ function setup() {
  * Move the user circle, check for overlap, draw the two circles
  */
 function draw() {
-  background("#aaaaaa");
+  background("#7e7c79");
   
   // Move user circle
   moveUser();
@@ -67,6 +67,7 @@ function draw() {
   // Draw target
   drawTarget();
   hitTarget();
+  moveTarget();
  
 }
 
@@ -154,5 +155,14 @@ function hitTarget() {
   if (overlapp) {
     target.fill = target.fills.overlap;
   }
+  else {
+    target.fill = target.fills.noOverlap;
+  }
 
+}
+function moveTarget() {
+  target.x = target.x + random (-5,5);
+  target.y = target.y + random (-5,5);
+target.x = constrain(target.x,0+target.size/2,width-target.size/2);
+target.y = constrain(target.y,0+target.size/2,height-target.size/2);
 }
