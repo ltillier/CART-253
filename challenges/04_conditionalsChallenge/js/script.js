@@ -32,6 +32,17 @@ const user = {
   fill: "#000000"
 };
 
+const target = { //add a target for the puck to hit!
+  x:50,
+  y:50,
+  size:50,
+  fill:"#fff000",
+  fills: {
+    noOverlap: "#fff000",
+    overlap: "#ff00f0"
+  }
+
+}
 /**
  * Create the canvas
  */
@@ -53,7 +64,9 @@ function draw() {
   drawPuck();
   // Move puck
   movePuck();
-  console.log(puck.x);
+  // Draw target
+  drawTarget();
+ 
 }
 
 /**
@@ -115,4 +128,15 @@ function movePuck() {
 puck.x = constrain(puck.x,0+puck.size/2,width-puck.size/2)
 puck.y = constrain(puck.y,0+puck.size/2,height-puck.size/2)
   }
+}
+
+/**
+ * Creates Target for puck to hit!
+ */
+function drawTarget() {
+  push();
+  noStroke();
+  fill(target.fill);
+  ellipse(target.x,target.y,target.size);
+  pop();
 }
