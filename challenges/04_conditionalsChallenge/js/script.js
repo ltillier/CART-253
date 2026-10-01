@@ -66,6 +66,7 @@ function draw() {
   movePuck();
   // Draw target
   drawTarget();
+  hitTarget();
  
 }
 
@@ -139,4 +140,19 @@ function drawTarget() {
   fill(target.fill);
   ellipse(target.x,target.y,target.size);
   pop();
+}
+/**
+ * Target changes color when puck 'hits'
+ */
+function hitTarget() {
+  //check overlap
+  //i probably have to use a different variable
+  const dd = dist(puck.x,puck.y,target.x,target.y);
+  //check distance 
+  const overlapp = (dd< puck.size/2 + target.size/2);
+  //set fill based on overlap
+  if (overlapp) {
+    target.fill = target.fills.overlap;
+  }
+
 }
