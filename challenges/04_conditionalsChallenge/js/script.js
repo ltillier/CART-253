@@ -112,7 +112,7 @@ function movePuck() {
     if(puck.y <= user.y){
       puck.speedy = -5
     }
-
+puck.x = constrain(puck.x,0+puck.size/2,width-puck.size/2)
+puck.y = constrain(puck.y,0+puck.size/2,height-puck.size/2)
   }
-
 }
