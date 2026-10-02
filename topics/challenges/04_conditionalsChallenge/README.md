@@ -2,7 +2,7 @@
 
 Laurel Tillier
 
-[View this project online](https://ltillier.github.io/CART-253/challenges/04_conditionalsChallenge/)
+[View this project online](https://ltillier.github.io/CART-253/challenges/04_conditionalsChallenge)
 
 ## Description
 
