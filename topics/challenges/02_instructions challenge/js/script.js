@@ -1,24 +1,25 @@
 /**
- * Herd of Horses?
+ * Canal at Night
  * Laurel Tillier
  * 
- * Herd of horses? Yeah, I've heard of em.
+ * This project is a drawing of the Lachine Canal at night
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Created canvas
 */
 function setup() {
     
 createCanvas(500,500);
+noStroke();
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draws river, riverbanks, sky, powerlines
 */
 function draw() {
 background(160,180,210);
