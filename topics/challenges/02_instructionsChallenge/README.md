@@ -1,8 +1,8 @@
 # TITLE OF PROJECT
 
-AUTHOR NAME
+Laurel Tillier
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://github.com/ltillier/CART-253/tree/main/topics/challenges/02_instructionsChallenge)
 
 ## Description
 
