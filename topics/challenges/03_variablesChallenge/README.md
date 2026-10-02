@@ -2,7 +2,7 @@
 
 Laurel Tillier
 
-[View this project online](/variablesChallenge/)
+[View this project online](https://ltillier.github.io/CART-253/topics/challenges/03_variablesChallenge/)
 
 ## Description
 
