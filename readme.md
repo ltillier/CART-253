@@ -4,6 +4,6 @@ This website (repository?) contains/collects/displays all challenges, prototypes
 
 ## Things you can check out:
 - you can look at my [journal](https://ltillier.github.io/CART-253/journal) here
-
+- [challenges](/challenges/)
 ## Prototypes
 - there's nothing here yet, sorry...
