@@ -2,19 +2,10 @@
  * Push A Puck
  * Laurel Tillier
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Use the mouse to push the puck into the goal
  */
 
 "use strict";
-
-/**
- * Circle Master
- * Pippin Barr
- *
- * This will be a program in which the user can push a circle
- * on the canvas using their own circle.
- */
 
 const puck = {
   x: 200,
