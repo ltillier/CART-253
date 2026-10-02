@@ -1,8 +1,8 @@
-# WEEK 4 - CONDITIONALS CHALLENGE - MOVE THE PUCK
+# WEEK 4 - CONDITIONALS CHALLENGE - PUSH THE PUCK
 
 Laurel Tillier
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
+[View this project online](https://ltillier.github.io/CART-253/challenges/04_conditionalsChallenge/)
 
 ## Description
 

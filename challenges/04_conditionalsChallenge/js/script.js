@@ -1,11 +1,13 @@
 /**
- * Push A Puck
+ * Push The Puck
  * Laurel Tillier
  * 
  * Use the mouse to push the puck into the goal
  */
 
 "use strict";
+
+
 
 const puck = {
   x: 200,
@@ -58,7 +60,6 @@ function draw() {
   // Draw target
   drawTarget();
   hitTarget();
-  moveTarget();
  
 }
 
@@ -150,10 +151,4 @@ function hitTarget() {
     target.fill = target.fills.noOverlap;
   }
 
-}
-function moveTarget() {
-  target.x = target.x + random (-5,5);
-  target.y = target.y + random (-5,5);
-target.x = constrain(target.x,0+target.size/2,width-target.size/2);
-target.y = constrain(target.y,0+target.size/2,height-target.size/2);
 }
