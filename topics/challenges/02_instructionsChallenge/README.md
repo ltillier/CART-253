@@ -1,8 +1,8 @@
-# TITLE OF PROJECT
+# Canal At Night - Instructions Challenge
 
 Laurel Tillier
 
-[View this project online](https://github.com/ltillier/CART-253/tree/main/topics/challenges/02_instructionsChallenge)
+[View this project online](https://ltillier.github.io/CART-253/topics/challenges/02_instructionsChallenge/)
 
 ## Description
 
