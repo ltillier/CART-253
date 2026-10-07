@@ -9,10 +9,26 @@
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * making basic setup for testing key events
 */
-function setup() {
 
+let mouseTriggerBall ={
+    x:200,
+    y:200,
+    size:50,
+    speed:0,
+    fill:{
+        r:255,
+        g:255,
+        b:255,
+    }
+
+
+}
+
+function setup() {
+createCanvas(500,500);
+noStroke();
 }
 
 
@@ -20,5 +36,12 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+    background(0);
+    fill(mouseTriggerBall.fill.r,mouseTriggerBall.fill.g,mouseTriggerBall.fill.b);
+    ellipse(mouseTriggerBall.x,mouseTriggerBall.y,mouseTriggerBall.size);
+
+
+}
+function KeyPressed(){
 
 }
