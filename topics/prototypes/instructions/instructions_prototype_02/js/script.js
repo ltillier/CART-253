@@ -1,9 +1,8 @@
 /**
- * Title of Project
+ * molamola
  * Laurel Tillier
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * behold the glory of the sunfish
  */
 
 "use strict";
@@ -14,6 +13,7 @@
 function setup() {
 createCanvas(500,500);
 noStroke();
+angleMode(DEGREES);
 }
 
 
@@ -26,13 +26,19 @@ drawFish();
 fishEye();
 fishFin();
 blush();
+//i didn't realize you could change the cursor
+cursor(HAND);
+//fuck it we're in space now
+planetRing();
+drawPlanet();
+//spaceship
+drawShips();
 }
 
 //give this guy a fat fishy body
 function drawFish() {
     rect(100,100,300,300,20,75,75,20);
     ellipse(300,250,100,450);
-
 }
 //add fish eye so it sees us
 function fishEye() {
@@ -54,9 +60,36 @@ function fishFin() {
     ellipse(250,265,75,50);
     pop();
 }
+//the fish blushes! she's shy
 function blush() {
     push();
     fill(250,200,200);
     ellipse(190,255,20,15);
+    pop();
+}
+//trying to add a planet with a ring in the background
+function drawPlanet() {
+    push();
+    fill(100,100,150);
+    ellipse(56,35,45);
+    pop();
+}
+//the aforementioned ring
+function planetRing() {
+    push();
+    fill(250,200,250);
+    rotate(-10);
+    ellipse(50,50,100,50);
+    fill(0,0,0);
+    ellipse(49,47,80,40);
+    pop();
+} 
+//maybe a little space ship?
+function drawShips() {
+    push();
+    fill(255,0,0);
+    triangle(300,400,350,390,350,410);
+    triangle(320,380,370,370,370,385);
+    triangle(325,420,380,410,380,430);
     pop();
 }
