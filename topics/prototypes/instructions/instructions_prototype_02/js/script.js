@@ -18,11 +18,24 @@ noStroke();
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draws a sunfish with functions
 */
 function draw() {
 background(0,0,0);
-rect(100,100,300,300,20,75,75,20);
-ellipse(300,250,100,450);
+drawFish();
+fishEye();
 }
 
+function drawFish() {
+    rect(100,100,300,300,20,75,75,20);
+    ellipse(300,250,100,450);
+
+}
+function fishEye() {
+    push();
+    fill(200,200,200);
+    ellipse(175,200,25);
+    fill(0,0,0);
+    ellipse(177.5,200,20);
+    pop();
+}
