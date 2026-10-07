@@ -1,5 +1,5 @@
 /**
- * 
+ * Reactive Gradient
  * Laurel
  * 
  * I'm trying to make a gradient that will change color when you click it.
@@ -8,37 +8,35 @@
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Adding a bunch of variables + also creating the canvas
 */
-function setup() {
-createCanvas(1000,500);
-noStroke();
-background(50);  
+//added test color to see if i could make variable variable-er (note:it was successful!)
+let colorTest = "#ff0000"
 
-//variables for the gradient
-
-//start and end colors for gradient
-let colorStart = color(255);
-let colorEnd = color(0);
-
-//there will be nine different values because i forgot how decimals work
-//my block of lerps
-let interA = lerpColor(colorStart,colorEnd,0.1);
-let interB = lerpColor(colorStart,colorEnd,0.2);
-let interC = lerpColor(colorStart,colorEnd,0.3);
-let interD = lerpColor(colorStart,colorEnd,0.4);
-let interE = lerpColor(colorStart,colorEnd,0.5);
-let interF = lerpColor(colorStart,colorEnd,0.6);
-let interG = lerpColor(colorStart,colorEnd,0.7);
-let interH = lerpColor(colorStart,colorEnd,0.8);
-let interI = lerpColor(colorStart,colorEnd,0.9);
+//added variable for swatch - maybe this should be a constant? 
+let swatch = {
+    w:100,
+    h:500,
+    fill: {
+        left:colorTest,
+        right:255
+    }
 
 }
 
 
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
-function draw() {
+function setup() {
+createCanvas(1000,500);
+noStroke();
+background(50);  
+}
 
+/**
+ * Ideally, this will draw the rectangles that make up the color palette - currently there's just one
+*/
+
+function draw() {
+    //one rectangle, just to see what I'm doing for now
+    fill(swatch.fill.left);
+    rect(0,0,swatch.w,swatch.h);
 }
