@@ -28,8 +28,7 @@ let mouseTriggerBall ={
 
 function setup() {
     createCanvas(500,500);
-
-
+    setTimeout(changeBallColor,3000);
 }
 
 
@@ -53,22 +52,32 @@ function draw() {
 function moveBall(){
     mouseTriggerBall.x = mouseTriggerBall.x + mouseTriggerBall.speed;
 }
+function keyPressed(event){
+    console.log(event.key);
+}
+
+function changeBallColor(){
+    mouseTriggerBall.fill.r = 255;
+    mouseTriggerBall.fill.g = 0;
+    mouseTriggerBall.fill.b = 0;
+
+}
 // function mousePressed(){
 //     mouseTriggerBall.speed = 2;
 // }
 // function mouseReleased (){
 //     mouseTriggerBall.speed =0;
 // }
-function mouseWheel(event){
-    mouseTriggerBall.size = constrain(mouseTriggerBall.size,5,200);
-    mouseTriggerBall.size = mouseTriggerBall.size - event.deltaY;
-}
-function mouseDragged(){
-    mouseTriggerBall.x = mouseX;
-}
-function mouseMoved(){
-    mouseTriggerBall.y = mouseY;
-}
+// function mouseWheel(event){
+//     mouseTriggerBall.size = constrain(mouseTriggerBall.size,5,200);
+//     mouseTriggerBall.size = mouseTriggerBall.size - event.deltaY;
+// }
+// function mouseDragged(){
+//     mouseTriggerBall.x = mouseX;
+// }
+// function mouseMoved(){
+//     mouseTriggerBall.y = mouseY;
+// }
 //there are some functions inbuilt to p5 LIKE MOUSE PRESSED
 //the draw function loops, so anything in it also loops
 // if you want results like below you are better off avoiding conditionals

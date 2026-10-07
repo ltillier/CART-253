@@ -33,7 +33,7 @@ noStroke();
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draws the circle
 */
 function draw() {
     background(0);
@@ -42,6 +42,15 @@ function draw() {
 
 
 }
-function KeyPressed(){
+//moves the circle IF the key 'r' is pressed - except CURRENTLY IT DOESN'T WORK
+
+function KeyPressed(event){
+    console.log(event.key);
+    // if(event.key==='r'){
+    //     mouseTriggerBall.x = mouseTriggerBall.x+5;
+    // }
+    // if(event.key==='R'){
+    //     mouseTriggerBall.x = mouseTriggerBall.x +5;
+    // }
 
 }
