@@ -1,6 +1,6 @@
 /**
  * Title of Project
- * Author Name
+ * Laurel Tillier
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
  * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
@@ -11,7 +11,12 @@
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
+//variables parking lot
+
 function setup() {
+createCanvas(1000,500);
+noStroke();
+background(0,0,0);
 
 }
 
