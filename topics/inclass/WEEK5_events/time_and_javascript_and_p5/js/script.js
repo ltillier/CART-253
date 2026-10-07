@@ -8,17 +8,24 @@
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
-function setup() {
+//pasted code for Time and JavaScript and p5 from course website (thank you Pippin :P)
+const ball = {
+    x: 0,
+    y: 200,
+    size: 50
+};
 
+function setup() {
+    createCanvas(400, 400);
 }
 
-
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
 function draw() {
-
+    background(0);
+    
+    ball.x += 1;
+    
+    push();
+    noStroke();
+    ellipse(ball.x, ball.y, ball.size);
+    pop();
 }
