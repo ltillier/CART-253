@@ -47,6 +47,15 @@ function draw() {
     //one rectangle, just to see what I'm doing for now
     fill(swatch.fill.left);
     rect(0,0,swatchWidth,swatch.h);
+    //second rectangle
+    /**
+     * I'm trying to make it so that the number of rectangles is determined by 
+     * how many times the user clicks but I worry that doing so is not possible
+     * starting with 2 will allow me to set up a conditional that will change color
+     * based on mouse click (and then maybe based on WHERE the mouse clicks?)
+     * I need to make the x position of the swatch dependent on how many swatches there are
+     * 
+     */
     fill(swatch.fill.right);
     rect(500,0,swatchWidth,swatch.h);
 }
