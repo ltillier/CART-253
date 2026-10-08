@@ -59,6 +59,13 @@ class Sheep {
         //     this.fill = color(255,0,0);
         // }
     }
+    move(){
+        const d = dist(this.x,this.y,mouseX,mouseY);
+        const overlap = (d<this.size/2+herder.size/2);
+        if(overlap){
+            this.x = this.x+2;
+        }
+    }
 }
 //ok now that Sheep is a class, I'm going to try and create a sheep (IT WORKS)
 let sheep1 = new Sheep(100,100,50);
@@ -86,7 +93,9 @@ function draw() {
     drawSheep();
     //uses function to make all the sheep amble
     // sheepAmble();
+    //moves the sheep IF herder is too close... unfortunately it's not working atm
     moveSheep();
+    sheep1.move();
 }
 
 //draws the herder
