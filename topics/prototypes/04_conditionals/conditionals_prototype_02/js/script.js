@@ -1,24 +1,28 @@
 /**
  * Title of Project
- * Author Name
+ * Laurel Tillier
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Goal is to make a 'game' of sorts where the mouseobject 'herds' objects
+ * to a specific point or goal
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * make a beautiful pasture for our critters
 */
 function setup() {
+    createCanvas(500,500);
+    // lines are scary! get rid of them
+    noStroke();
 
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draw the beautiful pasture with functions
 */
 function draw() {
+    background(0,150,0);
 
 }
