@@ -2,7 +2,7 @@
 
 Laurel Tillier
 
-[View this project online](/topics/challenges/05_eventsChallenge/)
+[View this project online](https://ltillier.github.io/CART-253/topics/challenges/05_eventsChallenge/)
 
 ## Description
 
