@@ -26,12 +26,13 @@ function setup() {
 function draw() {
   background("#87ceeb");
   
-  // Only increase the score if the game is not over
+  // Only increase the score if the game is not over  btw, ! means NOT so if gameNOTover
   if (!gameOver) {
     // Score increases relatively slowly
-    score += 0.05;
+    score += 0.033;
   }
   displayUI();
+
 }
 
 /**
@@ -60,3 +61,16 @@ function displayScore() {
   text(floor(score), width/2, height/2);
   pop();
 }
+
+//"write the lose function" OKAY DOKAY!
+function lose(){
+    gameOver = true;
+}
+
+// function keyPressed(){
+//     lose();
+// }
+
+// function mouseMoved(){
+//     lose();
+// }
