@@ -1,5 +1,5 @@
 /**
- * Title of Project
+ * Herd Sheep
  * Laurel Tillier
  * 
  * Goal is to make a 'game' of sorts where the mouseobject 'herds' objects
@@ -40,7 +40,16 @@ class Sheep {
         this.x += random(-1,1);
         this.y += random(-1,1);
     }
-    run(){
+    freakOut(){
+        //this is me testing whether just writing this as constant here and then putting
+        //conditional elsewhere will do the trick
+        this.x += random(-5,5);
+        this.y += random(-5,5);
+
+    // run(){
+    //     if(MouseEvent){
+    //         this.x += 1
+    //     }
         //this code will hopefully make them RUN AWAY from the mouse object
         //this is conditionals EEEK!
         //calculate distance between circles centers
@@ -71,18 +80,15 @@ function setup() {
 */
 function draw() {
     background(0,150,0);
+    //draws the herder with functions
     drawHerder();
-    //show sheeps
-    sheep1.show();
-    sheep2.show();
-    sheep3.show();
-    lamb.show();
+    //draws the sheep with functions
+    drawSheep();
     //uses function to make all the sheep amble
     // sheepAmble();
-
-
-
+    moveSheep();
 }
+
 //draws the herder
 function drawHerder(){
     push();
@@ -90,10 +96,14 @@ function drawHerder(){
     ellipse(mouseX,mouseY,herder.size);
     pop();
 }
-//draws the sheep or whatever is being herded
+
+
+//draws the sheep
 function drawSheep(){
-    push();
-    fill()
+    sheep1.show();
+    sheep2.show();
+    sheep3.show();
+    lamb.show();
 }
 //makes the sheep amble
 function sheepAmble(){
@@ -101,4 +111,17 @@ function sheepAmble(){
     sheep2.amble();
     sheep3.amble();
     lamb.amble();
+}
+
+function moveSheep(){
+//ok now I have to define overlap and such
+//calculate distance
+const d = dist(sheep1.x,sheep1.y,herder.x,herder.y);
+
+//check if distance is less than sum of radii
+const overlap = (d<sheep1.size/2+herder.size/2);
+
+if(overlap){
+    sheep1.freakOut();
+}
 }
