@@ -67,10 +67,16 @@ function lose(){
     gameOver = true;
 }
 
-// function keyPressed(){
-//     lose();
-// }
+function keyPressed(){
+    lose();
+}
 
-// function mouseMoved(){
-//     lose();
+function mouseMoved(){
+    lose();
+}
+
+// if (navigator.onLine) {
+//   console.log("online");
+// } else {
+//   console.log("offline");
 // }
