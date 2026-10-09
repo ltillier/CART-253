@@ -70,4 +70,5 @@ function draw() {
      * based on mouse click (and then maybe based on WHERE the mouse clicks?)
      * I need to make the x position of the swatch dependent on how many swatches there are
      * 
+     * update: im gen so stuck, I think I'm going to work on something else for now because I don't really know how to proceed here :P
      */

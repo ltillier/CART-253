@@ -1,9 +1,9 @@
 /**
- * Herd Sheep
+ * Herd Anxious Sheep
  * Laurel Tillier
  * 
- * Goal is to make a 'game' of sorts where the mouseobject 'herds' objects
- * to a specific point or goal
+ * Use the mouse to herd sheep - keep them from running away from your pasture!
+ * Maybe you should build a fence...
  */
 
 "use strict";
@@ -26,6 +26,8 @@ class Sheep {
         this.y = y;
         this.size = size;
         this.fill = 255;
+        this.speedx = 1;
+        this.speedy = 1;
     }
     show() {
         //this code runs once when mySheep.show() is called.
@@ -37,8 +39,8 @@ class Sheep {
     }
     amble(){
         //this code runs all the time?? can i do that?? when mySheep.amble is called??? idk
-        this.x += random(-1,1);
-        this.y += random(-1,1);
+        this.x += random(-5,5);
+        this.y += random(-5,5);
     }
     freakOut(){
         //this is me testing whether just writing this as constant here and then putting
@@ -59,19 +61,34 @@ class Sheep {
         //     this.fill = color(255,0,0);
         // }
     }
-    move(){
-        const d = dist(this.x,this.y,mouseX,mouseY);
-        const overlap = (d<this.size/2+herder.size/2);
-        if(overlap){
-            this.x = this.x+2;
+    move(){ 
+        const d = dist(this.x,this.y,herder.x,herder.y);
+        const tooClose = (d<this.size/2+herder.size/2+10);
+        if(tooClose) {
+            if(this.x > herder.x){
+                this.speedx = 2
+            }
+            else{
+                this.speedx = -2
+            }
+            if(this.y - herder.y >0){
+                this.speedy = 2
+            }
+            else{
+                this.speedy = -2
+            }
+            this.x = this.x + this.speedx
+            this.y = this.y + this.speedy
         }
     }
 }
+
 //ok now that Sheep is a class, I'm going to try and create a sheep (IT WORKS)
 let sheep1 = new Sheep(100,100,50);
 let sheep2 = new Sheep(400,200,60);
 let sheep3 = new Sheep(400,300,50);
 let lamb = new Sheep (200,200,20);
+
 /**
  * make a beautiful pasture for our critters
 */
@@ -86,6 +103,8 @@ function setup() {
  * Draw the beautiful pasture with functions
 */
 function draw() {
+    herder.x = mouseX;
+    herder.y = mouseY;
     background(0,150,0);
     //draws the herder with functions
     drawHerder();
@@ -95,7 +114,7 @@ function draw() {
     // sheepAmble();
     //moves the sheep IF herder is too close... unfortunately it's not working atm
     moveSheep();
-    sheep1.move();
+    sheepAmble();
 }
 
 //draws the herder
@@ -114,6 +133,7 @@ function drawSheep(){
     sheep3.show();
     lamb.show();
 }
+
 //makes the sheep amble
 function sheepAmble(){
     sheep1.amble();
@@ -122,15 +142,10 @@ function sheepAmble(){
     lamb.amble();
 }
 
+//makes the sheep move when the mouse gets too close
 function moveSheep(){
-//ok now I have to define overlap and such
-//calculate distance
-const d = dist(sheep1.x,sheep1.y,herder.x,herder.y);
-
-//check if distance is less than sum of radii
-const overlap = (d<sheep1.size/2+herder.size/2);
-
-if(overlap){
-    sheep1.freakOut();
-}
+    sheep1.move();
+    sheep2.move();
+    sheep3.move();
+    lamb.move();
 }
