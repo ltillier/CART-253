@@ -23,7 +23,8 @@ const fish={
     w:300,
     h:200,
     r:70,
-    speed:1,
+    speedx:2,
+    speedy:2,
     fill:255,
     fills:{
         body:222,
@@ -43,17 +44,24 @@ function draw() {
     moveFish();
     hitEdge();
 }
+//constrains fish to canvas with conditionals
 function hitEdge(){
     if(fish.x>width-fish.w){
-        fish.speed=-1
+        fish.speedx=-2
     }
-    else if(fish.x<0+fish.w){
-        fish.speed=1
+    else if(fish.x<0){
+        fish.speedx=2
+    }
+    if(fish.y>height-fish.h){
+        fish.speedy=-2
+    }
+    else if(fish.y<0){
+        fish.speedy=2
     }
 }
 function moveFish(){
-    fish.x = fish.x+fish.speed
-    // fish.y = fish.y+fish.speed
+    fish.x = fish.x+fish.speedx
+    fish.y = fish.y+fish.speedy
 }
 function drawFish(){
     drawBody();
