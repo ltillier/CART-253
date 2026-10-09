@@ -1,9 +1,8 @@
 /**
- * Fish
+ * Fishy Fishy Fishy
  * Laurel Tillier
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Watch a fish swim around and eat food. When it eats, it grows bigger.
  */
 
 "use strict";
