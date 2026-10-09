@@ -26,8 +26,8 @@ class Sheep {
         this.y = y;
         this.size = size;
         this.fill = 255;
-        this.speedx = 1;
-        this.speedy = 1;
+        this.speedx = 0.5;
+        this.speedy = 0.5;
     }
     show() {
         //this code runs once when mySheep.show() is called.
@@ -36,15 +36,20 @@ class Sheep {
         //added little sheepy heads for our sheeps
         fill(0);
         ellipse(this.x-this.size/2,this.y,this.size/4,this.size/3);
+        //adding little sheepy tails
+        fill(this.fill);
+        ellipse(this.x+this.size/2,this.y,this.size/8,this.size/4);
+
     }
     amble(){
         //this code runs all the time?? can i do that?? when mySheep.amble is called??? idk
-        this.x += random(-5,5);
-        this.y += random(-5,5);
+        this.x += 0.5;
+        this.y += 0.5;
     }
     freakOut(){
         //this is me testing whether just writing this as constant here and then putting
         //conditional elsewhere will do the trick
+        //I'm going to add this back once I fix movement a little :P
         this.x += random(-5,5);
         this.y += random(-5,5);
 
@@ -62,6 +67,7 @@ class Sheep {
         // }
     }
     move(){ 
+        //this code makes the sheep move away from the herder when it gets too close!
         const d = dist(this.x,this.y,herder.x,herder.y);
         const tooClose = (d<this.size/2+herder.size/2+10);
         if(tooClose) {
@@ -81,6 +87,21 @@ class Sheep {
             this.y = this.y + this.speedy
         }
     }
+    //I need to change this so it doesn't teleport sheep around - but first i need to fix movement
+    // checkEdges(){
+    //     if(this.x>width-this.size/2){
+    //         this.x=this.x-width;
+    //     }
+    //     else if (this.x<0){
+    //         this.x=width-this.x;
+    //     }
+    //     if(this.y>height){
+    //         this.y=this.y-height;
+    //     }
+    //     else if(this.y<0){
+    //         this.y=height-this.y;
+    //     }
+    // }
 }
 
 //ok now that Sheep is a class, I'm going to try and create a sheep (IT WORKS)
@@ -96,6 +117,7 @@ function setup() {
     createCanvas(500,500);
     // lines are scary! get rid of them
     noStroke();
+
 
 }
 
@@ -114,7 +136,9 @@ function draw() {
     // sheepAmble();
     //moves the sheep IF herder is too close... unfortunately it's not working atm
     moveSheep();
-    sheepAmble();
+    //makes the sheep 'amble' I need this to be less freak out-y 
+    // sheepAmble();
+    // checkEdges();
 }
 
 //draws the herder
@@ -148,4 +172,12 @@ function moveSheep(){
     sheep2.move();
     sheep3.move();
     lamb.move();
+}
+
+//make the sheep stay in the pasture
+function checkEdges(){
+    sheep1.checkEdges();
+    sheep2.checkEdges();
+    sheep3.checkEdges();
+    lamb.checkEdges();
 }
