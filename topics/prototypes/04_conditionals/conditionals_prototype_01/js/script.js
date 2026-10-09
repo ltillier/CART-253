@@ -22,8 +22,10 @@ let swatch = {
         interC:200,
         right:222
     }
-
 }
+let left = 0;
+let right = 222;
+
 // class Swatch{
 //     constructor(x,y,w,h,fill){
 //         this.x=x;
@@ -45,9 +47,9 @@ let swatch = {
 // let swatch1 = new Swatch(0,0,500,500,0);
 // let swatch2= new Swatch(500,0,500,500);
 
-//added test color to see if i could make variable variable-er (note:it was successful!)
-let colorLeft = 0;
-let colorRight = 222;
+// //added test color to see if i could make variable variable-er (note:it was successful!)
+// let colorLeft = 0;
+// let colorRight = 222;
 //added variable to denote number of swatches
 //ok so if i tack that on there it freaks out which is because 'width' is determined by canvas which comes after this is called
 
@@ -98,15 +100,19 @@ function draw() {
     // rect(width/3,0,swatchWidth,swatch.h);
 }
 function drawSwatch(){
-    fill(swatch.fill.left);
+    //color1
+    fill(left);
     rect(swatch.x,swatch.y,swatch.w,swatch.h);
+    //mixes of color1 and color2
     fill(swatch.fill.interA);
     rect(swatch.x+swatch.w,swatch.y,swatch.w,swatch.h);
-    fill(swatch.fill.interB);
+    //middle color:
+    fill(left);
     rect(swatch.x+swatch.w*2,swatch.y,swatch.w,swatch.h);
     fill(swatch.fill.interC);
     rect(swatch.x+swatch.w*3,swatch.y,swatch.w,swatch.h);
-    fill(swatch.fill.right);
+    //color2
+    fill(right);
     rect(swatch.x+swatch.w*4,swatch.y,swatch.w,swatch.h);
 }
     /** Lotta comments here:
