@@ -13,10 +13,13 @@
 let swatch = {
     x:0,
     y:0,
-    w:300,
+    w:200,
     h:500,
     fill:{
         left:0,
+        interA:100,
+        interB:150,
+        interC:200,
         right:222
     }
 
@@ -52,7 +55,7 @@ let colorRight = 222;
 
 function setup() {
 createCanvas(1000,500);
-// noStroke();
+noStroke();
 background(50);  
 
 }
@@ -97,8 +100,14 @@ function draw() {
 function drawSwatch(){
     fill(swatch.fill.left);
     rect(swatch.x,swatch.y,swatch.w,swatch.h);
-    fill(swatch.fill.right);
+    fill(swatch.fill.interA);
     rect(swatch.x+swatch.w,swatch.y,swatch.w,swatch.h);
+    fill(swatch.fill.interB);
+    rect(swatch.x+swatch.w*2,swatch.y,swatch.w,swatch.h);
+    fill(swatch.fill.interC);
+    rect(swatch.x+swatch.w*3,swatch.y,swatch.w,swatch.h);
+    fill(swatch.fill.right);
+    rect(swatch.x+swatch.w*4,swatch.y,swatch.w,swatch.h);
 }
     /** Lotta comments here:
      * I'm trying to make it so that the number of rectangles is determined by 
