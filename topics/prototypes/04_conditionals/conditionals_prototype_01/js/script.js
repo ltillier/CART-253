@@ -23,8 +23,11 @@ let swatch = {
         right:222
     }
 }
-let left = 0;
-let right = 222;
+
+let swatchColor={
+    color1:0,
+    color2:222
+}
 
 // class Swatch{
 //     constructor(x,y,w,h,fill){
@@ -57,9 +60,7 @@ let right = 222;
 
 function setup() {
 createCanvas(1000,500);
-noStroke();
-background(50);  
-
+// noStroke();
 }
 
 // //Moved this to below canvas to see if my idea for swatch size will work
@@ -86,6 +87,7 @@ background(50);
 */
 
 function draw() {
+    background(255);  
     drawSwatch();
     // //one rectangle, just to see what I'm doing for now
     // fill(swatch.fill.left);
@@ -101,18 +103,20 @@ function draw() {
 }
 function drawSwatch(){
     //color1
-    fill(left);
+    fill(swatchColor.color1);
     rect(swatch.x,swatch.y,swatch.w,swatch.h);
-    //mixes of color1 and color2
-    fill(swatch.fill.interA);
-    rect(swatch.x+swatch.w,swatch.y,swatch.w,swatch.h);
+    fill(lerpColor(swatchColor.color1),lerpColor(swatchColor.color2),0.5);
+    rect(swatch.x,swatch.y,swatch.w,swatch.h);
+    // //mixes of color1 and color2
+    // fill(swatch.fill.interA);
+    // rect(swatch.x+swatch.w,swatch.y,swatch.w,swatch.h);
     //middle color:
-    fill(left);
-    rect(swatch.x+swatch.w*2,swatch.y,swatch.w,swatch.h);
-    fill(swatch.fill.interC);
-    rect(swatch.x+swatch.w*3,swatch.y,swatch.w,swatch.h);
+    // fill(lerpColor(color(swatch.color.color1),color(swatch.color.color2),0.5));
+    // rect(swatch.x+swatch.w*2,swatch.y,swatch.w,swatch.h);
+    // fill(swatch.fill.interC);
+    // rect(swatch.x+swatch.w*3,swatch.y,swatch.w,swatch.h);
     //color2
-    fill(right);
+    fill(swatchColor.color2);
     rect(swatch.x+swatch.w*4,swatch.y,swatch.w,swatch.h);
 }
     /** Lotta comments here:
