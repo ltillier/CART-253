@@ -10,24 +10,24 @@
 /**
  * Adding a bunch of variables + also creating the canvas
 */
-let swatch = {
-    x:0,
-    y:0,
-    w:200,
-    h:500,
-    fill:{
-        left:0,
-        interA:100,
-        interB:150,
-        interC:200,
-        right:222
-    }
-}
+// let swatch = {
+//     x:0,
+//     y:0,
+//     w:200,
+//     h:500,
+//     fill:{
+//         left:0,
+//         interA:100,
+//         interB:150,
+//         interC:200,
+//         right:222
+//     }
+// }
 
-let swatchColor={
-    color1:0,
-    color2:222
-}
+// let swatchColor={
+//     color1:0,
+//     color2:222
+// }
 
 // class Swatch{
 //     constructor(x,y,w,h,fill){
@@ -55,12 +55,18 @@ let swatchColor={
 // let colorRight = 222;
 //added variable to denote number of swatches
 //ok so if i tack that on there it freaks out which is because 'width' is determined by canvas which comes after this is called
-
+let swatch={
+    x:0,
+    y:0,
+    w:100,
+    h:500
+}
 
 
 function setup() {
-createCanvas(1000,500);
+createCanvas(500,500);
 // noStroke();
+
 }
 
 // //Moved this to below canvas to see if my idea for swatch size will work
@@ -87,8 +93,36 @@ createCanvas(1000,500);
 */
 
 function draw() {
-    background(255);  
-    drawSwatch();
+     // Create p5.Color objects to interpolate between.
+  let left = color("#ff0000");
+  let to = color("#f00fff");
+
+  // Create intermediate colors.
+  let interA = lerpColor(left, to, 0.3);
+  let interB = lerpColor(left, to, 0.5);
+  let interC = lerpColor(left,to,0.8);
+
+  // Draw the left rectangle.
+  noStroke();
+  fill(left);
+  rect(swatch.x, swatch.y,swatch.w,swatch.h);
+
+  // Draw the left-center rectangle.
+  fill(interA);
+  rect(swatch.x+swatch.w,swatch.y,swatch.w,swatch.h);
+
+  // Draw the right-center rectangle.
+  fill(interB);
+  rect(swatch.x+swatch.w*2,swatch.y,swatch.w,swatch.h);
+
+  //Draw right ish rectangle
+  fill(interC);
+  rect(swatch.x+swatch.w*3,swatch.y,swatch.w,swatch.h);
+  // Draw the right rectangle.
+  fill(to);
+  rect(swatch.x+swatch.w*4,swatch.y,swatch.w,swatch.h);
+    // background(250);  
+    // drawSwatch();
     // //one rectangle, just to see what I'm doing for now
     // fill(swatch.fill.left);
     // rect(0,0,swatchWidth,swatch.h);
@@ -100,25 +134,31 @@ function draw() {
     // //its not working... not sure why
     // fill(interA);
     // rect(width/3,0,swatchWidth,swatch.h);
+    changeColor();
 }
-function drawSwatch(){
-    //color1
-    fill(swatchColor.color1);
-    rect(swatch.x,swatch.y,swatch.w,swatch.h);
-    fill(lerpColor(swatchColor.color1),lerpColor(swatchColor.color2),0.5);
-    rect(swatch.x,swatch.y,swatch.w,swatch.h);
-    // //mixes of color1 and color2
-    // fill(swatch.fill.interA);
-    // rect(swatch.x+swatch.w,swatch.y,swatch.w,swatch.h);
-    //middle color:
-    // fill(lerpColor(color(swatch.color.color1),color(swatch.color.color2),0.5));
-    // rect(swatch.x+swatch.w*2,swatch.y,swatch.w,swatch.h);
-    // fill(swatch.fill.interC);
-    // rect(swatch.x+swatch.w*3,swatch.y,swatch.w,swatch.h);
-    //color2
-    fill(swatchColor.color2);
-    rect(swatch.x+swatch.w*4,swatch.y,swatch.w,swatch.h);
+function changeColor(){
+    let mouseLeft=mouseX<width/2
+    if(mouseLeft){
+        left= "#ffffff"
+    }
 }
+
+// function drawSwatch(){
+//     //color1
+//     fill(swatchColor.color1);
+//     rect(swatch.x,swatch.y,swatch.w,swatch.h);
+//     // //mixes of color1 and color2
+//     // fill(swatch.fill.interA);
+//     // rect(swatch.x+swatch.w,swatch.y,swatch.w,swatch.h);
+//     //middle color:
+//     // fill(lerpColor(color(swatch.color.color1),color(swatch.color.color2),0.5));
+//     // rect(swatch.x+swatch.w*2,swatch.y,swatch.w,swatch.h);
+//     // fill(swatch.fill.interC);
+//     // rect(swatch.x+swatch.w*3,swatch.y,swatch.w,swatch.h);
+//     //color2
+//     fill(swatchColor.color2);
+//     rect(swatch.x+swatch.w*4,swatch.y,swatch.w,swatch.h);
+// }
     /** Lotta comments here:
      * I'm trying to make it so that the number of rectangles is determined by 
      * how many times the user clicks but I worry that doing so is not possible

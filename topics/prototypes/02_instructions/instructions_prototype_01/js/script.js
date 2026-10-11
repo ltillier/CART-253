@@ -25,7 +25,7 @@ createCanvas(500,500);
 */
 function draw() {
 //background
-background(0,0,0);
+background(100);
 //no strokes
 noStroke();
 //horse
@@ -48,7 +48,7 @@ function drawHorse() {
 function drawBody() {
     //horse body
     push();
-    fill(170);
+    fill("#522612");
     ellipse(200,450,350);
     //horse neck
     ellipse(200,270,180,300);
@@ -62,7 +62,7 @@ function drawBody() {
 function drawHead() {
     //horse head
     push();
-    fill(200);
+    fill("#5f2e19");
     ellipse(240,150,180);
     //horse nose (this is part of the head if you think about it)
     ellipse(400,151,100);
@@ -76,10 +76,10 @@ function drawHead() {
 function drawEye () {
     //add eyeball
     push();
-    fill(250);
+    fill("#0c001a");
     ellipse(275,100,25);
     //add eyelid
-    fill(200);
+    fill("#5f2e19");
     quad(290,85,265,100,285,115,200,100);
     pop();
 }
@@ -89,13 +89,13 @@ function drawEye () {
 function drawFeatures () {
     //add nostril
     push();
-    fill(100);
+    fill(0);
     ellipse(420,120,15);
     triangle(420,120,405,112.5,420,112.5,)
     pop();
     //add ears
     push();
-    fill(200);
+    fill("#5f2e19");
     triangle(230,80,230,20,200,70);
     triangle(240,80,250,25,210,70);
     pop();
@@ -106,7 +106,7 @@ function drawFeatures () {
 function drawMane () {
     //add mane
     push();
-    fill(50);
+    fill(0);
     quad(200,70,150,250,120,200,180,70);
     quad(180,70+20,130,250+20,100,200+20,160,70+20);
     quad(150,130,100,350,85,275,150,120);

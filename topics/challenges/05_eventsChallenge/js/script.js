@@ -71,7 +71,7 @@ function keyPressed(){
     lose();
 }
 
-function mouseMoved(){
+function mouseEvent(){
     lose();
 }
 
