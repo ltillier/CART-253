@@ -59,12 +59,7 @@ function draw() {
     hitEdge();
     eatFood();
     turn();
-    //fish eye
-    let eye={
-    x:fish.x+50,
-    y:fish.y+75,
-    size:50
-    }
+    shrink();
 }
 
 
@@ -108,7 +103,7 @@ function drawEye(){
 
     //fish eye
     fill(fish.fills.eye);
-    ellipse(eye.x,eye.y,eye.size);
+    ellipse(fish.x+50,fish.y+75,50);
     //fish pupil
     fill(fish.fills.pupil);
     ellipse(fish.x+50,fish.y+75,30);
@@ -141,9 +136,10 @@ function eatFood(){
     let d=dist(food.x,food.y,fish.x,fish.y+fish.h/2);
     let near=(d<food.size/2+fishMouth);
     if(near){
-        food.x=random(900,1000);
+        food.x=random(0,750);
         food.y=random(0,100);
         fish.w=fish.w+25;
+        console.log(fish.w);
         fish.h=fish.h+25;
     }
 }
@@ -154,11 +150,19 @@ function turn(){
     let tooFar=food.x>outOfBounds;
     if(tooFar){
         //fish eye turns red to show anger at not being able to turn its body
-        //IM PROJECTING ONTO THE FISH HERE
-        //IDK WHY BUT MY VARIABLE IS ...constant?? you can see me figure this out in real time lmao
-        //ok that didn't work.
+        //this is a temporary setup, I'm going to figure out how to make the x value change
+        //on all the fish features so it looks like it's eating
+        //someday. idk when
+        //ugh
         fish.fills.eye="#ff0000"
-
+    }
+}
+function shrink(){
+    if(fish.w>400){
+        fish.w=300;
+        fish.h=200;
+        food.x=fish.x+200;
+        food.y=fish.y+fish.h;
     }
 }
 
