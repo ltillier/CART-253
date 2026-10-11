@@ -43,8 +43,16 @@ class Sheep {
     }
     amble(){
         //this code runs all the time?? can i do that?? when mySheep.amble is called??? idk
-        this.x += 0.5;
-        this.y += 0.5;
+        let direction={
+            left:-1,
+            right:1,
+        }
+        this.x += random(-1,1);
+        this.y += random(-1,1);
+        //started a 'boundary' conditional will continue later when my computer is more charged (at 9% currently)
+        if(this.x>width-this.size/2){
+            this.speedx=-1;
+        }
     }
     freakOut(){
         //this is me testing whether just writing this as constant here and then putting
@@ -117,8 +125,6 @@ function setup() {
     createCanvas(500,500);
     // lines are scary! get rid of them
     noStroke();
-
-
 }
 
 /**
@@ -132,12 +138,10 @@ function draw() {
     drawHerder();
     //draws the sheep with functions
     drawSheep();
-    //uses function to make all the sheep amble
-    // sheepAmble();
     //moves the sheep IF herder is too close... unfortunately it's not working atm
     moveSheep();
     //makes the sheep 'amble' I need this to be less freak out-y 
-    // sheepAmble();
+    sheepAmble();
     // checkEdges();
 }
 
