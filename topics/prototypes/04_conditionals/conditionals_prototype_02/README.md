@@ -1,6 +1,6 @@
-# TITLE OF PROJECT
+# HERDING SHEEP
 
-AUTHOR NAME
+Laurel Tillier
 
 [View this project online](URL_FOR_THE_RUNNING_PROJECT)
 

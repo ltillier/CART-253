@@ -6,4 +6,16 @@ This website (repository?) contains/collects/displays all challenges, prototypes
 - you can look at my [journal](https://ltillier.github.io/CART-253/journal) here
 
 ## Prototypes
-- there's nothing here yet, sorry...
+Woah! now there should be stuff here!
+### Instructions
+- [prototype 1](https://ltillier.github.io/CART-253/topics/prototypes/02_instructions/instructions_prototype_01/)
+- [prototype 2](https://ltillier.github.io/CART-253/topics/prototypes/02_instructions/instructions_prototype_02/)
+- [prototype 3](/images/e182272c70f7199618bb5bf003501ec6.jpg)
+### Variables
+- [prototype 1](/images/e182272c70f7199618bb5bf003501ec6.jpg)
+- [prototype 2](/images/e182272c70f7199618bb5bf003501ec6.jpg)
+- [prototype 3](/images/e182272c70f7199618bb5bf003501ec6.jpg)
+### Conditionals
+- [prototype 1](/images/e182272c70f7199618bb5bf003501ec6.jpg)
+- [prototype 2](https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_02/)
+- [prototype 3](https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_03/)
