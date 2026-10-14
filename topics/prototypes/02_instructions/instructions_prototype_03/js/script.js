@@ -3,48 +3,46 @@
  * Laurel Tillier
  * 
  * I'm going to try to make a drawing that's all lines, no fill
- * this has got to be one of the worst things I've made ever, but at this point I really don't know what to do about it
- * I can spend more time working on something that I wont like that will not help my grade at all (considering how late it is)
- * or I can give up (GIVE UP) and move on to other things that will also be bad and not get good grades. whatever
+ * I'm redoing the whole thing because I wasn't happy with it
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Made the canvas, removed fill from shapes
 */
 function setup() {
-createCanvas(100,100);
+createCanvas(500,500);
 noFill();
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * made a  background, added a bunch of stupid lines that don't look good, etc
 */
 function draw() {
     background(0);
     stroke(255);
-    //change stroke connection style
-    strokeJoin(ROUND);
-    //change stroke weight so it's smaller
-    strokeWeight(0.25);
-    //scale the points
-    scale(3);
-    //move points
-    translate(-40,-34.5);
-    //starting points
-    startingPoints();
-    //cross
-    startingCross();
-    //first connection
-    firstConnection();
-    //second connection
-    secondConnection();
-    //third connection
-    thirdConnection();
-    //fourth connection
-    fourthConnection();
+    // //change stroke connection style
+    // strokeJoin(ROUND);
+    // //change stroke weight so it's smaller
+    // // strokeWeight(0.25);
+    // //scale the points
+    // //scale(3);
+    // //move points
+    // // translate(-40,-34.5);
+    // //starting points
+    // startingPoints();
+    // //cross
+    // startingCross();
+    // //first connection
+    // firstConnection();
+    // //second connection
+    // secondConnection();
+    // //third connection
+    // thirdConnection();
+    // //fourth connection
+    // fourthConnection();
 
 }
 function startingPoints(){
@@ -65,7 +63,7 @@ function startingCross(){
 }
 function firstConnection(){
     //connection 1 
-    stroke(255,255,0);
+    stroke(255);
     beginShape();
     vertex(55,50);
     vertex(55,52);
@@ -79,7 +77,7 @@ function firstConnection(){
 }
 function secondConnection(){
     //connection 2
-    stroke(255,0,0);
+    stroke(255);
     beginShape();
     vertex(50,55);
     vertex(50,58);
@@ -94,7 +92,7 @@ function secondConnection(){
 }
 function thirdConnection(){
     //connection 3
-    stroke(0,255,0);
+    stroke(255);
     beginShape();
     vertex(50,45);
     vertex(50,42);
@@ -112,7 +110,7 @@ function thirdConnection(){
 }
 function fourthConnection(){
     //connection 4
-    stroke(0,0,255);
+    stroke(255);
     beginShape();
     vertex(46,54);
     vertex(46,62);
