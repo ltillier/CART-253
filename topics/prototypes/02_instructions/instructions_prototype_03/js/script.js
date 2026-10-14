@@ -4,6 +4,7 @@
  * 
  * I'm going to try to make a drawing that's all lines, no fill
  * I'm redoing the whole thing because I wasn't happy with it
+ * this reminds me of block printing
  */
 
 "use strict";
@@ -14,15 +15,33 @@
 function setup() {
 createCanvas(500,500);
 noFill();
+angleMode(DEGREES);
 }
 
 
 /**
- * made a  background, added a bunch of stupid lines that don't look good, etc
+ * made a  background etc
 */
 function draw() {
     background(0);
     stroke(255);
+    translate(0,100);
+    //small iso experiment
+    //top
+    // push(); 
+    // translate(-100,0);
+    // shearX(45);
+    // rect(150,50,300,50);
+    // pop();
+    //front
+    rect(150,100,300,100);
+    //side
+    // push();
+    // translate(0,-150);
+    // shearY(45);
+    // rect(100,100,50,100);
+    // pop();
+
     // //change stroke connection style
     // strokeJoin(ROUND);
     // //change stroke weight so it's smaller
@@ -45,6 +64,7 @@ function draw() {
     // fourthConnection();
 
 }
+
 function startingPoints(){
     //origin
     point(50,50);
