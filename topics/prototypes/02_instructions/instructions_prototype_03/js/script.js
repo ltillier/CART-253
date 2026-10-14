@@ -14,7 +14,7 @@
 */
 function setup() {
 createCanvas(500,500);
-noFill();
+// noFill();
 angleMode(DEGREES);
 }
 
@@ -23,24 +23,57 @@ angleMode(DEGREES);
  * made a  background etc
 */
 function draw() {
-    background(0);
-    stroke(255);
+    background(100);
+    stroke(0);
     translate(0,100);
     //small iso experiment
-    //top
-    // push(); 
-    // translate(-100,0);
-    // shearX(45);
+    // top
+    push(); 
+    fill(20);
+    translate(-100,0);
+    shearX(45);
     // rect(150,50,300,50);
-    // pop();
+    rect(300,50,100,50);
+    // rect(150,50,150,50);
+    pop();
     //front
-    rect(150,100,300,100);
+    // rect(150,100,300,100);
+    // rect(150,150,300,50);
+    // rect(300,100,100);
+    //making more complex shape for the car
+    push();
+    fill(20);
+    //car body
+    beginShape();
+    vertex(150,150);
+    vertex(150,200);
+    vertex(450,200);
+    vertex(450,150);
+    vertex(400,100);
+    vertex(300,100);
+    vertex(150,150);
+    endShape();
+    //car wheels
+    fill(50);
+    circle(225,200,50);
+    circle(400,200,50);
+    pop();
     //side
-    // push();
-    // translate(0,-150);
-    // shearY(45);
+    push();
+    fill(20);
+    translate(0,-150);
+    shearY(45);
     // rect(100,100,50,100);
-    // pop();
+    rect(100,150,50);
+    fill(255);
+    rect(100,160,20);
+    rect(130,160,20);
+    pop();
+    //windshield
+    push();
+    fill(255,150,0,100);
+    quad(250,50,300,100,150,150,100,100);
+    pop();
 
     // //change stroke connection style
     // strokeJoin(ROUND);
