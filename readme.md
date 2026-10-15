@@ -12,9 +12,9 @@ __NOTE THAT THINGS THAT ARE NOT DONE LINK TO 'PLACEHOLDER IMAGE' (horse) INSTEAD
 
 ### Instructions
 
-- [prototype 1](/topics/prototypes/02_instructions/instructions_prototype_01/)
-- [prototype 2](/topics/prototypes/02_instructions/instructions_prototype_02/)
-- [prototype 3](/topics/prototypes/02_instructions/instructions_prototype_03/)
+- [prototype 1](https://ltillier.github.io/CART-253/topics/prototypes/02_instructions/instructions_prototype_01/)
+- [prototype 2](https://ltillier.github.io/CART-253/topics/prototypes/02_instructions/instructions_prototype_02/)
+- [prototype 3](https://ltillier.github.io/CART-253/topics/prototypes/02_instructions/instructions_prototype_03/)
 
 ### Variables
 
