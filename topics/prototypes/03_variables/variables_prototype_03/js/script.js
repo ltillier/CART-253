@@ -1,9 +1,9 @@
 /**
- * Title of Project
+ * hmmm im not sure
  * Author Name
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Using 'aim' example (here:https://p5js.org/examples/Angles-And-Motion-Aim/) to make a prototype...
+ * 
  */
 
 "use strict";

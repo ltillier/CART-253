@@ -1,11 +1,9 @@
-/**
- * horse
+/**Horse
+ * 
  * Laurel Tillier
  * 
- * HOW EMBARRASSING! THIS PROJECT IS SO HORRENDOUSLY LATE!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
- * OR SHOW MERCY! YOUR CHOICE! IT WILL ONLY AFFECT HOW I SEE YOU FOREVER!
- * AHAHAH! NO PRESSURE! JUST KIDDING I GET IT! I STARTED THIS REALLY LATE!
+ * It's a horse :)
+ * 
  */
 
 "use strict";
@@ -21,7 +19,7 @@ createCanvas(500,500);
 
 
 /**
- * DESCRIBE
+ * Sets up background, removes stroke from objects, draws the horse
 */
 function draw() {
 //background

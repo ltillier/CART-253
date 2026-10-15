@@ -27,7 +27,7 @@ fishFin();
 blush();
 //i didn't realize you could change the cursor
 cursor(HAND);
-//fuck it we're in space now
+//celestial bodies to go with our sun fish
 planetRing();
 drawPlanet();
 //spaceship
@@ -92,7 +92,7 @@ function planetRing() {
     ellipse(49,47,80,40);
     pop();
 } 
-//maybe a little space ship?
+//some space ships
 function drawShips() {
     push();
     noStroke();

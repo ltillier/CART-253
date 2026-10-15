@@ -1,9 +1,9 @@
 /**Ever taught a horse to drive?
  * Laurel Tillier
  * 
- * Small iso experiment. slaps 2D this guy can fit so much shitty 3D inside it
+ * Small iso experiment. slaps 2D this guy can fit so much bad 3D inside it
  * This car is small and has a cool orange windshield. 
- * it's not very detailed yet
+ * it's not very detailed yet though
  */
 
 "use strict";
