@@ -24,17 +24,17 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 //variables parking lot
-let crab={
+//basic turtle :P note: this will be 'class' later, once I get the basic thing down. I want multiple turtles but for now I'll have 1
+let turtle={
     x:50,
     y:50,
     size:50,
-    speedy:0.5,
-    fill:"#ffffff"
+    fill:"#2a702a"
 }
 
 function setup() {
 createCanvas(500,200);
-
+angleMode(DEGREES);
 }
 
 
@@ -43,13 +43,22 @@ createCanvas(500,200);
 */
 function draw() {
     background(200);
-    drawCrab();
-    wave();
+    drawTurtle();
+    moveTurtle();
+    waveOrientation();
 }
 
-function drawCrab(){
-    fill(crab.fill);
-    ellipse(crab.x, crab.y, crab.size);
+//function that draws the turtle (what do you call a baby turtle?)
+function drawTurtle(){
+    push();
+    noStroke();
+    fill(turtle.fill);
+    ellipse(turtle.x,turtle.y,turtle.size);
+    pop();
+}
+//function that moves the turtle to the right :)
+function moveTurtle(){
+    turtle.x = turtle.x+noise(0.0005*frameCount);
 }
 
 function wave(){
@@ -71,4 +80,9 @@ function wave(){
     // Draw the line.
     line(0, y, x, y);
   }
+}
+function waveOrientation(){
+    translate(width,height);
+    rotate(180);
+    wave();
 }
