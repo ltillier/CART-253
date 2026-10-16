@@ -12,8 +12,10 @@
  * Sets up canvas and variables
 */
 //variables parking lot
-let camera={
-
+let spotLight={
+    x:250,
+    y:50,
+    size:50
 }
 
 //sets up canvas size and angle mode
@@ -25,55 +27,54 @@ angleMode(DEGREES);
 
 
 /**
- * draws a camera and makes it follow the mouse
+ * draws a spotlight and makes it follow the mouse
 */
 function draw() {
     background(0);
-    //creating camera so I can make that rotate instead :P
-    fill(255);
-    //actual thing that rotates
-    ellipse(100,100,50);
-    //arms that hold camera
-    rect(65,50,10,50);
-    rect(125,50,10,50);
-    //thing that arms attach to that attaches to wall or cieling or whatever
-    rect(50,50,100,10);
-    //other shape that makes it easier to see what camera is looking at
-    rect(75,100,50,20);
+    //function that draws the spotlight
+    drawSpotLight();
+    //function that draws the bracket
+    drawBracket();
+}
 
-    //variables so I can make it rotate well and also position it properly
-    let cameraX=150;
-    let cameraY=200;
-    
-    //angle between camera and mouse
-    let cameraAngle = atan2(mouseY - cameraY, mouseX - cameraX);
+//function that draws main part of spotlight
+function drawSpotLight(){
+    let spotLightAngle = atan2(mouseY - spotLight.y, mouseX - spotLight.x);
 
     push();
-    translate(cameraX, cameraY);
-    fill(255);
-    ellipse(0,0,50);
-    rotate(cameraAngle);
-    fill(255,0,0);
-    ellipse(0,0,50);
-    rect(0,-25,20,50);
+    noStroke();
+    //moves it from origin
+    translate(spotLight.x, spotLight.y);
+    //basic spotlight color
+    fill(150);
+    //basic circle
+    ellipse(0,0,spotLight.size);
+    //rotates it based on mouse position
+    rotate(spotLightAngle);
+    //light color
+    fill(255,255,0);
+    //light diffused thru canvas
+    quad(20,-10,20,10,500,100,500,-100);
+    //light origin
+    ellipse(20,0,spotLight.size/5,spotLight.size/1.75);
+    //basic spotlight color
+    fill(150);
+    rect(0,0-spotLight.size/2,20,50);
     pop();
+}
 
+//function that draws spotlight bracket
+function drawBracket(){
+    let bracketX=width/2-spotLight.size/2;
+    let bracketW=10;
 
-        // //PASTED CODE FROM AIM EXAMPLE
-        //     // Draw left eye
-
-        // let leftX = 150;
-        // let leftY = 200;
-
-        // // Calculate angle between left eye and mouse
-        // let leftAngle = atan2(mouseY - leftY, mouseX - leftX);
-
-        // push();
-        // translate(leftX, leftY);
-        // fill(255);
-        // ellipse(0, 0, 50, 50);
-        // rotate(leftAngle);
-        // fill(0);
-        // ellipse(12.5, 0, 25, 25);
-        // pop();
+    push();
+    noStroke();
+    fill(150);
+    rect(bracketX,0,spotLight.size,20);
+    fill(200);
+    rect(width/2-bracketW/2,0,bracketW,50,0,0,5,5);
+    fill(100);
+    ellipse(250,45,5);
+    pop();
 }
