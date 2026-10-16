@@ -1,18 +1,18 @@
 /**
- * hmmm im not sure
- * Author Name
+ * POV:DOCTOR
+ * Laurel Tillier
  * 
- * Using 'aim' example (here:https://p5js.org/examples/Angles-And-Motion-Aim/) to make a prototype...
+ * I'm going to make some kind of pulsing organ I think, and then I'll make screens that show some kind of 'info'
  * 
  */
 
 "use strict";
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * creating a canvas
 */
 function setup() {
-
+createCanvas(500,500);
 }
 
 
@@ -20,5 +20,9 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-
+    background(0);
+    frameRate(2);
+    let heartSize=100;
+    heartSize=heartSize+random(-1,1);
+    ellipse(250,250,150,2*heartSize);
 }
