@@ -17,12 +17,17 @@ createCanvas(500,500);
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draws organ, makes it pulse based on mouse proximity, etc
 */
 function draw() {
     background(0);
-    frameRate(2);
+    //setting up an anxiety mechanic
+    let d = dist(mouseX,mouseY,width/2,height/2);
+    let a =(2400/d); 
+    console.log(a);
+    frameRate(a);
+
     let heartSize=100;
-    heartSize=heartSize+random(-1,1);
+    heartSize=heartSize+random(-10,10);
     ellipse(250,250,150,2*heartSize);
 }
