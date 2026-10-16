@@ -7,7 +7,7 @@
  */
 
 "use strict";
-
+    
 /**
  * creating a canvas
 */
@@ -15,19 +15,32 @@ function setup() {
 createCanvas(500,500);
 }
 
+    
 
 /**
  * Draws organ, makes it pulse based on mouse proximity, etc
 */
 function draw() {
     background(0);
+
     //setting up an anxiety mechanic
     let d = dist(mouseX,mouseY,width/2,height/2);
-    let a =(2400/d); 
+    let a =(1200/d); 
     console.log(a);
     frameRate(a);
 
     let heartSize=100;
-    heartSize=heartSize+random(-10,10);
-    ellipse(250,250,150,2*heartSize);
+    heartSize=heartSize+random(-5,5);
+    fill(200,0,10);
+    ellipse(250,250,heartSize*1.5,2*heartSize);
+
+    //screen displaying framerate as heartrate
+    push();
+    noFill();
+    stroke(255);
+    rect(400,400,100);
+    pop();
+    stroke(255);
+    fill(255);
+    text(ceil(a)*2,420,420);
 }
