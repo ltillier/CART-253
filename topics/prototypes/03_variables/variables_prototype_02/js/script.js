@@ -25,17 +25,40 @@ angleMode(DEGREES);
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * draws a camera and makes it follow the mouse
 */
 function draw() {
     background(0);
     //creating camera so I can make that rotate instead :P
     fill(255);
-    rect(50,50,100,50);
-    rect(50,50,110,25,0,0,15,0);
-    ellipse(75,100,25);
-    rect(10,110,75,20);
-    rect(0,50,25,100);
+    //actual thing that rotates
+    ellipse(100,100,50);
+    //arms that hold camera
+    rect(65,50,10,50);
+    rect(125,50,10,50);
+    //thing that arms attach to that attaches to wall or cieling or whatever
+    rect(50,50,100,10);
+    //other shape that makes it easier to see what camera is looking at
+    rect(75,100,50,20);
+
+    //variables so I can make it rotate well and also position it properly
+    let cameraX=150;
+    let cameraY=200;
+    
+    //angle between camera and mouse
+    let cameraAngle = atan2(mouseY - cameraY, mouseX - cameraX);
+
+    push();
+    translate(cameraX, cameraY);
+    fill(255);
+    ellipse(0,0,50);
+    rotate(cameraAngle);
+    fill(255,0,0);
+    ellipse(0,0,50);
+    rect(0,-25,20,50);
+    pop();
+
+
         // //PASTED CODE FROM AIM EXAMPLE
         //     // Draw left eye
 
