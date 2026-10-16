@@ -1,8 +1,8 @@
 /**
- * POV:SURVEILLANCE
+ * POV:SPOTLIGHT
  * Laurel Tillier
  * 
- * using aim example (https://p5js.org/examples/Angles-And-Motion-Aim/) to make objects that 'look at' the user's mouse
+ * using aim example (https://p5js.org/examples/Angles-And-Motion-Aim/) to make a spotlight that 'looks at' the user's mouse
  * 
  */
 
@@ -54,7 +54,10 @@ function drawSpotLight(){
     //light color
     fill(255,255,0);
     //light diffused thru canvas
-    quad(20,-10,20,10,500,100,500,-100);
+    let lightX=1000;
+    let lightY=lightX/5;
+    fill(255,255,0,150);
+    quad(20,-10,20,10,lightX,lightY,lightX,-lightY);
     //light origin
     ellipse(20,0,spotLight.size/5,spotLight.size/1.75);
     //basic spotlight color

@@ -19,7 +19,7 @@ __NOTE THAT THINGS THAT ARE NOT DONE LINK TO 'PLACEHOLDER IMAGE' (horse) INSTEAD
 ### Variables Prototypes
 
 - [POV:SEAGULL](https://ltillier.github.io/CART-253/topics/prototypes/03_variables/variables_prototype_01/)
-- [prototype 2](/images/e182272c70f7199618bb5bf003501ec6.jpg)
+- [prototype 2](https://ltillier.github.io/CART-253/topics/prototypes/03_variables/variables_prototype_02/)
 - [prototype 3](/images/e182272c70f7199618bb5bf003501ec6.jpg)
 
 ### Conditionals
