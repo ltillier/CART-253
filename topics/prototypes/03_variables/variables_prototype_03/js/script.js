@@ -29,11 +29,13 @@ function draw() {
     console.log(a);
     frameRate(a);
 
-    let heartSize=100;
-    heartSize=heartSize+random(-5,5);
-    fill(200,0,10);
-    ellipse(250,250,heartSize*1.5,2*heartSize);
+    // let heartSize=100;
+    // heartSize=heartSize+random(-5,5);
+    // fill(200,0,10);
+    // ellipse(250,250,heartSize*1.5,2*heartSize);
 
+    //trying to draw the heart properly now
+    drawHeart();
     //screen displaying framerate as heartrate
     push();
     noFill();
@@ -43,4 +45,18 @@ function draw() {
     stroke(255);
     fill(255);
     text(ceil(a)*2,420,420);
+}
+//function that draws the heart
+function drawHeart(){
+    //I think I need to fiddle around with what the heart looks like tbh
+    push();
+    noStroke();
+    beginShape();
+    vertex(100,100);
+    vertex(75,150);
+    vertex(100,200);
+    vertex(200,200);
+    vertex(200,100);
+    endShape();
+    pop();
 }
