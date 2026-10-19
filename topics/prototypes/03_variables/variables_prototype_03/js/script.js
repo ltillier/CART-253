@@ -122,7 +122,7 @@ function heartBeat(){
 //makes a scalpel!
 function scalpel(){
     push();
-    fill(255);
+    fill('#65a1c4');
     rect(mouseX,mouseY,15,100,5,0,5,5);
     fill(200);
     rect(mouseX+5,mouseY-30,10,30,10,0,0,0);
