@@ -14,7 +14,16 @@
 function setup() {
 createCanvas(500,500);
 }
-
+    let heart={
+        left:{
+            x:100,
+            y:250
+        },
+        right:{
+            x:225,
+            y:275
+        }
+    }
     
 
 /**
@@ -36,6 +45,8 @@ function draw() {
 
     //trying to draw the heart properly now
     drawHeart();
+    //testing heart pulse 
+    heartBeat();
     //screen displaying framerate as heartrate
     push();
     noFill();
@@ -52,11 +63,22 @@ function drawHeart(){
     push();
     noStroke();
     beginShape();
-    vertex(100,100);
-    vertex(75,150);
-    vertex(100,200);
-    vertex(200,200);
+    //shape is going counter clockwise from top left point
+    vertex(75,100);
+    vertex(50,150);
+    //left pulse
+    vertex(heart.left.x,heart.left.y);
+
+    vertex(150,300);
+    vertex(200,300);
+    //right pulse
+    vertex(heart.right.x,heart.right.y);
+
+    vertex(250,200);
     vertex(200,100);
     endShape();
     pop();
+}
+function heartBeat(){
+    heart.left.x+=random(-5,5);
 }
