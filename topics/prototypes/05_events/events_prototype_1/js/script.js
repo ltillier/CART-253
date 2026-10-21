@@ -9,13 +9,26 @@
 "use strict";
 
 /**
- * make canvas
+ * make canvas AND VARIABLES :P
 */
 function setup() {
     createCanvas(500,500);
 
 }
+//variable for shifter knob
+let shifter={
+    x:100,
+    y:200,
+    size:50
+}
 
+//variable for gears, specifically neutral
+let gear={
+    neutral:{
+        low:100,
+        high:300
+    }
+}
 
 /**
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
@@ -23,7 +36,9 @@ function setup() {
 function draw() {
     background(200);
     manualTransmission();
-    shifter();
+    gearStick();
+    keyPressed();
+    mouseDragged();
 }
 
 //making line shape for the erm shifting like its the path that the thing takes
@@ -37,8 +52,8 @@ function manualTransmission(){
     //the points
         
         //neutral
-        vertex(100,200);
-        vertex(300,200);
+        vertex(gear.neutral.low,200);
+        vertex(gear.neutral.high,200);
         //1st and 2nd
         vertex(100,100);
         vertex(100,300);
@@ -55,7 +70,32 @@ function manualTransmission(){
 }
 
 //making the actual shifter i forget what it's called
-function shifter(){
+function gearStick(){
     fill(255);
-    ellipse(100,200,50);
+    ellipse(shifter.x,shifter.y,shifter.size);
+}
+
+// //making a function to change gearstick position based on what number is pressed
+// function shift(){
+
+// }
+function keyPressed(){
+    if (key==='1'){
+        shifter.y=100;
+    }
+    if (key==='2'){
+        shifter.y=300;
+    }
+    if (key==='n'){
+        shifter.y=200;
+    }
+}
+function mouseDragged(){
+    if(mouseX>pmouseX){
+        shifter.x+=10;
+    }
+    else if(mouseX<pmouseX){
+        shifter.x-=10;
+    }
+    shifter.x=constrain(shifter.x,gear.neutral.low,gear.neutral.high);
 }
