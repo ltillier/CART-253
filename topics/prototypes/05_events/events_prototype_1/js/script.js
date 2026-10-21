@@ -26,7 +26,9 @@ let shifter={
 let gear={
     neutral:{
         low:100,
-        high:300
+        mid:200,
+        high:300,
+        y:200
     }
 }
 
@@ -39,6 +41,7 @@ function draw() {
     gearStick();
     keyPressed();
     mouseDragged();
+    shift();
 }
 
 //making line shape for the erm shifting like its the path that the thing takes
@@ -79,7 +82,35 @@ function gearStick(){
 // function shift(){
 
 // }
+
+
+function mouseDragged(){
+    if(shifter.y===200){
+        if(mouseX>pmouseX){
+            shifter.x+=10;
+        }
+        else if(mouseX<pmouseX){
+            shifter.x-=10;
+        }
+    shifter.x=constrain(shifter.x,gear.neutral.low,gear.neutral.high);
+    }
+    else{
+        shifter.x+=0;
+    }
+}
+
+//function for moving gearstick up or down based on key presses
+function shift(){
+
+    
+}
 function keyPressed(){
+
+    //gear must be in 1 of 3 positions (x coordinates), lets define those
+    let a=(gear.neutral.low-shifter.x);
+    let alignedA=(a<10);
+
+    if(a===0||a===-100||a===-200){
     if (key==='1'){
         shifter.y=100;
     }
@@ -90,12 +121,4 @@ function keyPressed(){
         shifter.y=200;
     }
 }
-function mouseDragged(){
-    if(mouseX>pmouseX){
-        shifter.x+=10;
-    }
-    else if(mouseX<pmouseX){
-        shifter.x-=10;
-    }
-    shifter.x=constrain(shifter.x,gear.neutral.low,gear.neutral.high);
 }
