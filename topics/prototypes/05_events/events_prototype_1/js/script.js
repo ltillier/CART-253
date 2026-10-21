@@ -39,7 +39,6 @@ function draw() {
     background(200);
     manualTransmission();
     gearStick();
-    keyPressed();
     mouseDragged();
     shift();
 }
@@ -102,23 +101,30 @@ function mouseDragged(){
 //function for moving gearstick up or down based on key presses
 function shift(){
 
-    
-}
-function keyPressed(){
-
     //gear must be in 1 of 3 positions (x coordinates), lets define those
     let a=(gear.neutral.low-shifter.x);
-    let alignedA=(a<10);
 
-    if(a===0||a===-100||a===-200){
-    if (key==='1'){
-        shifter.y=100;
+    if(keyIsDown("Shift") && keyIsDown("1")===true){
+        // if(a===0||a===-100||a===-200){
+        //     if(keyPressed('1')){
+                shifter.y=100;
+        //     }
+        // }
     }
-    if (key==='2'){
-        shifter.y=300;
-    }
-    if (key==='n'){
-        shifter.y=200;
-    }
+
 }
-}
+
+// function keyPressed(){
+
+// {
+//     if (key==='1'){
+//         shifter.y=100;
+//     }
+//     if (key==='2'){
+//         shifter.y=300;
+//     }
+//     if (key==='n'){
+//         shifter.y=200;
+//     }
+// }
+// }
