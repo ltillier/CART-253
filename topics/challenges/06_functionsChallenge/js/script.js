@@ -1,6 +1,7 @@
 /**
  * Bouncy Ball Ball Bonanza
  * Pippin Barr
+ *      Adapted by Laurel Tillier 
  * 
  * The starting point for a ball-bouncing experience of
  * epic proportions!
@@ -61,6 +62,8 @@ function draw() {
 
     handleBounce(ball, paddle);
     handleBounce(ball2,paddle);
+    boundary(ball);
+    boundary(ball2);
 
     drawPaddle(paddle);
     drawBall(ball);
@@ -119,6 +122,7 @@ function drawBall(ball) {
     pop();
 }
 
+
 /**
  * Returns true if rectA and rectB overlap, and false otherwise
  * Assumes rectA and rectB have properties x, y, width and height to describe
@@ -136,4 +140,12 @@ function checkOverlap(rectA, rectB) {
           rectA.y - rectA.height/2 < rectB.y + rectB.height/2
 
     return overlap;
+}
+function boundary(ball){
+    let outOfBoundsX = (ball.x>width || ball.x<0);
+    let outOfBoundsY = (ball.y<0);
+    if (outOfBoundsX || outOfBoundsY){
+        ball.velocity.x = ball.velocity.x*-1;
+        ball.velocity.y = ball.velocity.y *-1
+    }
 }
