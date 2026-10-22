@@ -103,14 +103,16 @@ function shift(){
 
     //gear must be in 1 of 3 positions (x coordinates), lets define those
     let a=(gear.neutral.low-shifter.x);
-
-    if(keyIsDown("Shift") && keyIsDown("1")===true){
-        // if(a===0||a===-100||a===-200){
-        //     if(keyPressed('1')){
-                shifter.y=100;
-        //     }
-        // }
+    if(keyIsDown("Shift")){
+        console.log(keyIsDown);
     }
+    // if(keyIsDown("Shift")===true){
+    //     // if(a===0||a===-100||a===-200){
+    //     //     if(keyPressed('1')){
+    //             shifter.y=100;
+    //     //     }
+    //     // }
+    // }
 
 }
 
