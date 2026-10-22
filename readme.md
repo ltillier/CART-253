@@ -19,8 +19,16 @@ __NOTE THAT THINGS THAT ARE NOT DONE LINK TO 'PLACEHOLDER IMAGE' (horse) INSTEAD
 ### Variables Prototypes
 
 - [POV:SEAGULL](https://ltillier.github.io/CART-253/topics/prototypes/03_variables/variables_prototype_01/)
+
+![POV:SEAGULL](/images/Untitled-1.png)
+
 - [POV:SPOTLIGHT](https://ltillier.github.io/CART-253/topics/prototypes/03_variables/variables_prototype_02/)
+
+![POV:SPOTLIGHT](/images/POV_SPOTLIGHT.png)
+
 - [POV:DOCTOR](https://ltillier.github.io/CART-253/topics/prototypes/03_variables/variables_prototype_03/)
+
+![POV:DOCTOR](/images/POV_DOCTOR.png)
 
 ### Conditionals
 - [prototype 1](/images/e182272c70f7199618bb5bf003501ec6.jpg)
