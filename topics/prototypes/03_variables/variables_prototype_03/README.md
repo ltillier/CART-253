@@ -6,7 +6,7 @@ Laurel Tillier
 
 ## Description
 
-Change the heartrate of your patient by moving your scalpel closer to their heart.
+Change the heartrate of your patient by moving your scalpel closer to the heart.
 
 ## Attribution
 

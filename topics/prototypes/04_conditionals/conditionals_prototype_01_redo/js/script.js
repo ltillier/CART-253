@@ -1,5 +1,5 @@
 /**
- * Herd of Horses
+ * Herd of Horses?
  * Laurel Tillier
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
@@ -8,17 +8,15 @@
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
-function setup() {
+let img;
 
-}
+// Load the image and create a p5.Image object.
+async function setup() {
+  img = await loadImage('/clown.jpg');
+  createCanvas(100, 100);
 
+  // Draw the image.
+  image(img, 0, 0);
 
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
-function draw() {
-
+  describe('honk honk');
 }
