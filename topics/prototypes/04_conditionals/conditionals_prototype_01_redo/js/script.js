@@ -7,20 +7,22 @@
 
 "use strict";
 
-let horse1;
-let horse2;
-
 let horse={
+    x:100,
     y:248,
-    size:16
+    size:16,
+    a:undefined,
+    b:undefined,
+    c:undefined
 }
 
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 async function setup() {
-    horse1 = await loadImage('https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_01_redo/assets/images/horse_idle_left.png');
-    horse2 = await loadImage('https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_01_redo/assets/images/horse_idle_right.png');
+    horse.a = await loadImage('https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_01_redo/assets/images/horse_idle_left.png');
+    horse.b = await loadImage('https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_01_redo/assets/images/horse_idle_left.png');
+    horse.c = await loadImage('https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_01_redo/assets/images/horse_idle_right.png');
 
     createCanvas(256,256);
 
@@ -33,11 +35,43 @@ async function setup() {
 */
 function draw() {
     background(0);
-    drawHorse(horse1,10);
-    drawHorse(horse2,50);
+    horseReact();
 }
 
 
-function drawHorse(img,x) {
-    image(img,x,horse.y);
+function drawHorse(img) {
+    image(img,horse.x,horse.y);
+}
+
+//turns the horse based on mouse position on X axis
+function turn(){
+
+    if(mouseX>horse.x){
+        drawHorse(horse.b);
+
+        // horse.x=horse.x-0.5;
+    }
+    if(mouseX<horse.x){
+        drawHorse(horse.c);
+
+        // horse.x=horse.x+0.5;
+    }
+}
+
+//if the mouse is too close to the horse, the horse will turn
+function horseReact(){
+
+    let d = dist(horse.x,horse.y,mouseX,mouseY);
+    let tooClose = d<20;
+
+    let a = dist(mouseX,mouseY,pmouseX,pmouseY);
+    let tooFast = a>5;
+
+    if (tooClose===true || tooFast===true){
+        turn();
+    }
+    else{
+        drawHorse(horse.a);
+    }
+
 }
