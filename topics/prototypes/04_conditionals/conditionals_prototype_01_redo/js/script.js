@@ -25,8 +25,10 @@ async function setup() {
     horse.c = await loadImage('https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_01_redo/assets/images/horse_idle_right.png');
 
     createCanvas(256,256);
-
+       background(0);
     imageMode(CENTER);
+    horseSpawn(); 
+
 }
 
 
@@ -34,12 +36,13 @@ async function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-    background(0);
     horseReact();
+    isTheMouseMoving();
 }
 
 
 function drawHorse(img) {
+    background(0);
     image(img,horse.x,horse.y);
 }
 
@@ -66,12 +69,67 @@ function horseReact(){
 
     let a = dist(mouseX,mouseY,pmouseX,pmouseY);
     let tooFast = a>5;
+    
 
     if (tooClose===true || tooFast===true){
         turn();
     }
-    else{
-        drawHorse(horse.a);
-    }
+    // if (moving===true){
+    //     drawHorse(horse.c);
+    // }
 
+    // else{
+    //     drawHorse(horse.a);
+    // }
+
+}
+
+//horse spawns randomly on canvas
+function horseSpawn(){
+    horse.x = random(0,width);
+    spawnDirection();
+
+}
+//initial horse direction is based on spawn location
+function spawnDirection(){
+    let canvasLeft = horse.x<width/2;
+    let canvasRight = horse.x>width/2;
+
+    if(canvasLeft){
+        drawHorse(horse.c);
+    }
+    if(canvasRight){
+        drawHorse(horse.c);
+    }
+}
+//manage horse echo
+// function hideEcho(){
+//     background(0);
+// }
+//horse movement is dependent on horse direction
+
+// //redraw horse and background every time anything happens
+// function maintain(){
+//     let active = !();
+//     if(active){
+//         background(0);
+//         drawHorse(horse.c);
+//     }
+// }
+
+
+// if d=0, //mouse is not being moved
+
+//i need to write a function that somehow determines whether 
+function isTheMouseMoving(){
+
+    let x = mouseX;
+    let _x = pmouseX;
+    let notMoving = x===_x;
+    let moving = !(notMoving);
+
+    if(moving===true){
+        background(0);
+        drawHorse(horse.c);
+    }
 }
