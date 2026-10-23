@@ -2,8 +2,7 @@
  * Herd of Horses
  * Laurel Tillier
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * (ideally) this prototype gives you horses but they run away when you get too close bc THEY
  */
 
 "use strict";
