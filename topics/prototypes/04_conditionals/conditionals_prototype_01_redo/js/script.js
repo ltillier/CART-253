@@ -13,12 +13,11 @@ let img;
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 async function setup() {
-    img = await loadImage('https://ltillier.github.io/CART-253/images/e182272c70f7199618bb5bf003501ec6.jpg');
+    img = await loadImage('https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_01_redo/assets/images/horse_idle.png');
     
-    createCanvas(1000,1000);
+    createCanvas(32,32);
 
-    image(img,0,0);
-
+    imageMode(CENTER);
 }
 
 
@@ -26,5 +25,6 @@ async function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-
+    background(0);
+    image(img,8,24);
 }
