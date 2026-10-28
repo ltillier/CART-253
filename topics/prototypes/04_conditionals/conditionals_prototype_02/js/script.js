@@ -42,13 +42,15 @@ class Sheep {
 
     }
     amble(){
-        //this code runs all the time?? can i do that?? when mySheep.amble is called??? idk
-        let direction={
-            left:-1,
-            right:1,
-        }
-        this.x += random(-1,1);
-        this.y += random(-1,1);
+        //this code runs all the time and makes the sheeps move :P
+        // let direction={
+        //     left:-1,
+        //     right:1,
+        // }
+        //trying to use noise to make movement more fluid
+        let direction = noise(5);
+        this.x += random(direction, - direction);
+        this.y += random(direction,-direction);
         //started a 'boundary' conditional will continue later when my computer is more charged (at 9% currently)
         if(this.x>width-this.size/2){
             this.speedx=-1;

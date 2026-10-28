@@ -7,6 +7,7 @@ Laurel Tillier
 ## Description
 
 fih
+Watch the fish slowly bounce around its tank - when it eats food, it grows. If it grows too big, it poos.
 
 ## Attribution
 

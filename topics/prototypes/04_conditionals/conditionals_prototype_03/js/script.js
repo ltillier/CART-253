@@ -130,6 +130,7 @@ function moveFood(){
 }
 //lets do fish mouth
 let fishMouth=fish.h/4
+
 //when the fish is near food, the food vanishes
 //conditional to make fish 'eat' food and grow bigger
 function eatFood(){
@@ -164,5 +165,6 @@ function shrink(){
         food.x=fish.x+200;
         food.y=fish.y+fish.h;
     }
+    console.log(fish.w);
 }
 
