@@ -2,8 +2,8 @@
  * Horse
  * Laurel Tillier
  * 
- * I guess it's more of a unicorn.... try to touch it? i guess?
- * I literally don't know what im doing atp
+ * I guess it's more of a unicorn.... try to touch it?
+ * 
  */
 
 "use strict";
@@ -57,12 +57,12 @@ function turn(){
     if(mouseX>horse.x){
         drawHorse(horse.b);
 
-        horse.x=horse.x-0.5;
+        horse.x=horse.x-1;
     }
     if(mouseX<horse.x){
         drawHorse(horse.c);
 
-        horse.x=horse.x+0.5;
+        horse.x=horse.x+1;
     }
 
     horse.x=constrain(horse.x,0,width);

@@ -31,6 +31,6 @@ __NOTE THAT THINGS THAT ARE NOT DONE LINK TO 'PLACEHOLDER IMAGE' (horse) INSTEAD
 ![POV:DOCTOR](/images/POV_DOCTOR.png)
 
 ### Conditionals
-- [prototype 1](/images/e182272c70f7199618bb5bf003501ec6.jpg)
+- [prototype 1](https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_01_redo)
 - [prototype 2](https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_02/)
 - [prototype 3](https://ltillier.github.io/CART-253/topics/prototypes/04_conditionals/conditionals_prototype_03/)
