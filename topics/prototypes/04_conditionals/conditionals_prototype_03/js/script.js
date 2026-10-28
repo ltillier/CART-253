@@ -165,6 +165,5 @@ function shrink(){
         food.x=fish.x+200;
         food.y=fish.y+fish.h;
     }
-    console.log(fish.w);
 }
 

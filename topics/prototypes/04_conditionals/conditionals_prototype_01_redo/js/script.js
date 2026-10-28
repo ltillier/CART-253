@@ -3,6 +3,7 @@
  * Laurel Tillier
  * 
  * I guess it's more of a unicorn.... try to touch it?
+ * Move the mouse over the unicorn to catch it --- but be careful not to startle it!
  * 
  */
 
