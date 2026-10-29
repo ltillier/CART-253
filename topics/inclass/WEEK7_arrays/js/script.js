@@ -20,29 +20,50 @@ let square = {
     y:100
 }
 
-let squareSecond = {
-    x:100,
-    y:100
-}
+let arrayExample = [1,3,5,7,9,11,13,15,17];
+let array_of_squares = [];
 
 /**
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
     background('skyblue');
-    drawSquare(100,100);
-    drawSquareTwo(square);
-    drawSquareTwo(squareSecond);
+    // // //length
+    // // console.log(arrayExample.length)//DO NOT FORGET!!!
+    // // console.log(arrayExample[8]);
+    // arrayExample[3] =21
+    // console.log(arrayExample[3])
+    drawSquare(array_of_squares[0]);
+
 }
-function drawSquare(x1,y){
-    push ();
-    fill (255,0,255);
-    rect(x1,y,40,40);
-    pop ();
+
+function mousePressed(){
+    array_of_squares.push(createSquare(mouseX,mouseY))
 }
-function drawSquareTwo(tempSquare){
+
+function createSquare(tempX, tempY){
+    let tempSquare = {
+        x: tempX,
+        y: tempY,
+        w:50,
+        h:50
+    }
+    return tempSquare;
+}
+
+function drawSquare(tempSquare){
     push ();
     fill(255,0,255);
-    rect(tempSquare.x,tempSquare.y, 40,40);
+    rect(tempSquare.x, tempSquare.y, tempSquare.w, tempSquare.h);
     pop ();
 }
+
+/**
+ * class notes:
+ *  you can give the variable/array name and it will output the whole list in console.log #the more you know
+ * you can put holes in your array #woke (if you assign a spot on the array a value without doing the earlier spots)
+ * ok sabine says don't do that
+ * learning about strings
+ * a string
+ * "factory functions"
+ */
