@@ -16,7 +16,7 @@
 function setup() {
     createCanvas(500,500);
         background(0);
-    wires();
+    moveWires();
 }
 
 
@@ -25,7 +25,6 @@ function setup() {
 */
 function draw() {
 
-    wireCover();
 
 }
 
@@ -64,8 +63,47 @@ function wires(){
     pop();
 }
 
-//if you click on the wire something happens
-function mouseClicked(){
-//ok first up, whats a wire
-    let d=dist()
+//moves wires and wirebox to the correct place
+function moveWires(){
+    translate(100,200);
+    wireCover();
+    wires();
+}
+
+//if you want to cut a wire you have to press a key
+
+function keyPressed(){
+    if(key==='r'){
+        //red wire is cut
+        fill(0);
+        ellipse(160,220,25);
+    }
+    if(key==='g'){
+        //green wire is cut
+        fill(0);
+        ellipse(220,220,25);
+    }
+    if(key==='b'){
+        //blue wire is cut
+        fill(0);
+        ellipse(250,220,25);
+    }
+    //if a key is pressed one of 3 things happen
+    if(mouseX>250){
+        explode();
+    }
+    if(mouseX<250){
+        defused();
+    }
+}
+
+function explode(){
+    push();
+    fill(255);
+    ellipse(250,250,10);
+    pop();
+}
+function defused(){
+    fill(255);
+    text('yay your did it :D',250,250,50,50);
 }
