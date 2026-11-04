@@ -84,17 +84,19 @@ function gearStick(){
 
 
 function mouseDragged(){
-    if(shifter.y===200){
-        if(mouseX>pmouseX){
-            shifter.x+=10;
+    if(mouseButton.left){
+        if(shifter.y===200){
+            if(mouseX>pmouseX){
+                shifter.x+=10;
+            }
+            else if(mouseX<pmouseX){
+                shifter.x-=10;
+            }
+        shifter.x=constrain(shifter.x,gear.neutral.low,gear.neutral.high);
         }
-        else if(mouseX<pmouseX){
-            shifter.x-=10;
+        else{
+            shifter.x+=0;
         }
-    shifter.x=constrain(shifter.x,gear.neutral.low,gear.neutral.high);
-    }
-    else{
-        shifter.x+=0;
     }
 }
 
@@ -107,26 +109,26 @@ function shift(){
         console.log(keyIsDown);
     }
     // if(keyIsDown("Shift")===true){
-    //     // if(a===0||a===-100||a===-200){
-    //     //     if(keyPressed('1')){
-    //             shifter.y=100;
-    //     //     }
-    //     // }
+        // // if(a===0||a===-100||a===-200){
+        // //     if(keyPressed('1')){
+        //         shifter.y=100;
+        // //     }
+        // // }
     // }
 
 }
 
-// function keyPressed(){
+function keyPressed(){
 
-// {
-//     if (key==='1'){
-//         shifter.y=100;
-//     }
-//     if (key==='2'){
-//         shifter.y=300;
-//     }
-//     if (key==='n'){
-//         shifter.y=200;
-//     }
-// }
-// }
+{
+    if (key==='1'){
+        shifter.y=100;
+    }
+    if (key==='2'){
+        shifter.y=300;
+    }
+    if (key==='n'){
+        shifter.y=200;
+    }
+}
+}
