@@ -25,6 +25,7 @@ function setup() {
 */
 function draw() {
 
+    drawBomb();
 
 }
 
@@ -97,13 +98,26 @@ function keyPressed(){
     }
 }
 
+//what happens if you cut the wrong wire
 function explode(){
     push();
     fill(255);
     ellipse(250,250,10);
     pop();
 }
+//what happens if you cut the right wire
 function defused(){
     fill(255);
     text('yay your did it :D',250,250,50,50);
+}
+
+//draws the overall shape of the 'bomb'r
+function drawBomb(){
+    push();
+    beginClip({invert:true});
+    rect(101,201,198,198,5);
+    endClip();
+    fill(200);
+    rect(50,50,400,400,20);
+    pop();
 }
