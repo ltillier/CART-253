@@ -7,6 +7,13 @@
 
 "use strict";
 
+//variables parking lot
+let x = undefined;
+let y = undefined;
+let lineColor = undefined;
+let lineWeight = undefined;
+
+
 /**
  * Creates the canvas
  */
@@ -20,37 +27,43 @@ function setup() {
  */
 function draw() {
     background("pink");
+
+    //defined variables
+    x = 0;
+    lineColor = 0;
+    lineWeight = 1;
+
+    while(x<width){
+
+        //thing that happens
+        stroke(lineColor);
+        strokeWeight(lineWeight)
+        line(x,0,x,height);
+
+        //thing that changes
+        lineColor+=25;
+        x += 50;
+        lineWeight += 1;
+
+    }
+
+    //defined variables
+    y=0;
+    lineColor=0;
+    lineWeight = 1;
+
+    //second loop
+    while(y<height){
+        //thing that happens
+        stroke(lineColor);
+        strokeWeight(lineWeight);
+        line(0,y,width,y);
+
+        //thing that changes
+        lineColor += 25;
+        lineWeight += 1;
+        y += 50;
+    }
     
-    stroke(0);
-    line(0, 0, 0, height);
-    
-    stroke(25);
-    line(50, 0, 50, height);
-    
-    stroke(50);
-    line(100, 0, 100, height);
-    
-    stroke(75);
-    line(150, 0, 150, height);
-    
-    stroke(100);
-    line(200, 0, 200, height);
-    
-    stroke(125);
-    line(250, 0, 250, height);
-    
-    stroke(150);
-    line(300, 0, 300, height);
-    
-    stroke(175);
-    line(350, 0, 350, height);
-    
-    stroke(200);
-    line(400, 0, 400, height);
-    
-    stroke(225);
-    line(450, 0, 450, height);
-    
-    stroke(250);
-    line(500, 0, 500, height);
 }
+

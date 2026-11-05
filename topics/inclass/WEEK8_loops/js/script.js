@@ -52,3 +52,7 @@ while(gradientIndex<1){
 }
 
 }
+
+
+//nothing will be drawn unless you finish the while - there needs to be an end condition for the loop
+
