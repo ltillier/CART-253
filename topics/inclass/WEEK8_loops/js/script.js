@@ -14,6 +14,9 @@
 let clownImage = undefined;
 let horseImage = undefined;
 
+let x = 20;
+let y = 250;
+let imageWidth = 0;
 /**
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
@@ -28,8 +31,15 @@ async function setup() {
 */
 function draw() {
 background('skyblue')
-image(clownImage,0,0);
-image(horseImage,100,100,250,250);
+// image(clownImage,0,0);
+
+x=20; //you can also do this to reset x so that when it loops it still draws things
+//otherwise x is too big after the first loop of draw() so nothing happens
+while(x<width){
+    image(horseImage,x,y,imageWidth,imageWidth);
+    x=x+imageWidth;
+}
+noLoop(); //THIS IS IMPORTANT!!! OTHERWISE THINGS DON'T WORK!!! NO LOOP PREVENTS BACKGROUND FROM COVERING UP THINGS
 }
 
 //how to access an image :P
@@ -40,6 +50,7 @@ image(horseImage,100,100,250,250);
  * create a variable that declares variable as undefined OUTSIDE the function so it's global :P
  * DO NOT add forwardslash (/) to the image path!!!! DONT DO IT!!! the image isn't where it says it is in githum hahahah
  * (that might be why that didn't work for me el oh el)
- * 
+ * ok so this is good info, you don't have to commit/push image file to get it to work locally DUH
+ * now we r moving on to other stuff el oh el
  * 
  */
